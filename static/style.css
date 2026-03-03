@@ -1,0 +1,166 @@
+.rsvp {
+/*    background-color: #001133;*/
+    color: #FFEECC;
+}
+
+.rsvp-card {
+/*    background-color: #001133;*/
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid #FFEECC;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sq-button {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid black;
+    padding-top: 1em; 
+    padding-right: calc(1.44em - 0.2em);
+    padding-bottom: 1em;
+    padding-left: 1.44em;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.sq-button:hover {
+color: white;
+background: black;
+transition: background 170ms ease-in-out, color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.fancy-text {
+    font-family: 'Great Vibes';
+    /* Ballet, Dawning of a New Day, Felipa, Fleur De Leah, Fleur De Leah*/
+}
+
+.input-error{
+  outline: 1px solid red;
+}
+
+.field-error{
+  padding: 1.5em;
+  outline: 2px solid red;
+}
+
+.required {
+    color: red;
+}
+
+
+.buttons input[type="radio"] {
+    display: none;
+    z-index:100;
+}
+
+.buttons input[type="radio"] + label{
+    color: #FFEECC;
+    background-color: #121e18;
+    text-align: center;
+    border: 1px solid #FFEECC;
+    padding-top: 1em; 
+    padding-right: calc(1.44em - 0.2em);
+    padding-bottom: 1em;
+    padding-left: 1.44em;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.buttons input[type="radio"]:checked + label {
+    background: #FFEECC;
+    color: #121e18;
+    border: 1px solid #FFEECC;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    transition: background 170ms ease-in-out, color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+
+.buttons input[type="radio"] + label:hover {
+    box-shadow: inset 0 -5px 45px rgba(255,255,255,0.2), 0 1px 1px rgba(100,100,100,0.0);
+    border: 1px solid #FFEECC;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    transition: background 170ms ease-in-out, color 170ms ease-in-out, border-color 170ms ease-in-out;
+}
+
+
+
+
+
+
+
+
+.corner {
+background:#121e18;
+height:20px;
+width:20px;    
+position:absolute;
+}
+#sw {
+left: -2.4px;
+bottom: -2.5px;
+border-radius: 0px 20px 0px 0px;
+border-top: 2px solid #FFEECC;
+border-right: 2px solid #FFEECC;
+}
+#se {
+right: -2.4px;
+bottom: -2.5px;
+border-radius: 20px 0px 0px 0px;
+border-top: 2px solid #FFEECC;
+border-left: 2px solid #FFEECC;
+}
+#nw {
+left: -2.4px;
+top: -2px;
+border-radius: 0px 0px 20px 0px;
+border-bottom: 2px solid #FFEECC;
+border-right: 2px solid #FFEECC;
+}
+#ne {
+right: -2.4px;
+top: -2px;
+border-radius: 0px 0px 0px 20px;
+border-bottom: 2px solid #FFEECC;
+border-left: 2px solid #FFEECC;
+}
+
+
+.top{
+    margin-top: -1.9em;
+}
+
+.right {
+    margin-left: -1.9em;
+}
+
+.left {
+    margin-right: -1.9em;
+}

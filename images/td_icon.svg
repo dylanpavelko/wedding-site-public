@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop offset="0.818" style="stop-color: rgb(0, 121, 255);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="241.208" y1="155.819" x2="241.208" y2="246.299" id="gradient-0" gradientTransform="matrix(0.632009, -0.774961, 0.496345, 0.404788, 11.422277, 279.672034)">
+      <stop offset="0" style="stop-color: rgb(79, 174, 234);"/>
+      <stop offset="1" style="stop-color: rgb(78, 173, 91);"/>
+    </linearGradient>
+  </defs>
+  <g style="" transform="matrix(4.592358, 0, 0, 4.592358, -843.518555, -655.656311)">
+    <path style="fill: none; stroke-width: 13px; stroke: url('#gradient-0'); paint-order: fill;" d="M 186.47 156.338 L 239.611 156.296 C 305.565 154.685 295.225 242.941 221.748 237.687"/>
+    <line style="fill: rgb(216, 216, 216); stroke-width: 10px; stroke: rgb(79, 174, 234);" x1="222.786" y1="156.869" x2="222.76" y2="244.376"/>
+  </g>
+</svg>

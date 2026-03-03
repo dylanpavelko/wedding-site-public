@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dylan & Tyler's Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="mask-icon" type="image/png" href="static/images/td_icon.svg" />
+    <link rel="stylesheet" href="static/css/auth.css?v=2">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+<style type="text/css">
+	html {
+		position: relative;
+		min-height: 100%;
+	}
+
+	body{
+		background-color: rgba(50,50,50,.7); 
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,  url('static/images/ivy.png');
+		margin: 0;
+		min-height: 100vh;
+	}
+
+
+
+	/*PHOTO GRID STYLING  https://codepen.io/iamsaief/pen/jObaoKo*/
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	/* Main CSS */
+	.grid-wrapper > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.grid-wrapper > div > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	.grid-wrapper {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		grid-auto-rows: 400px;
+		grid-auto-flow: dense;
+	}
+	.grid-wrapper .wide {
+		grid-column: span 2;
+	}
+	.grid-wrapper .tall {
+		grid-row: span 2;
+	}
+	.grid-wrapper .big {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+
+	/*END OF PHOTO GRID STYLING*/
+
+
+
+
+	td {
+		padding-left: 1em;
+		padding-right: 1em;
+		text-align: center;
+	}
+
+
+	table td {
+	    border-left: 1px solid #FFEECC;
+	}
+
+	table td:first-child {
+	    border-left: none;
+	}
+
+	table td:last-child {
+	    border-right: none;
+	}
+
+	#title_card {
+		text-align: center; 
+		background-color: rgba(200,200,200,.5); 
+		color: white; 
+		width: 500px; 
+		margin-right: auto; 
+		margin-left: auto;
+		transition: all .3s ease-in-out;
+		margin-top: 5%;
+	}
+
+	#homepage_messages {
+		color: white;  
+		z-index: 20; 
+		width: 500px; 
+		margin-right: auto; 
+		margin-left: auto; 
+		left: 0; 
+		right: 0; 
+		margin-top: 4em; 
+		text-align: center;
+	}
+	
+	#loggedin_links {
+		
+		color: #FFEECC; 
+		font-family: 'Mukta'; 
+		font-size: large;
+		margin-right: auto; 
+		margin-left: auto; 
+		left: 0; 
+		right: 0; 
+		margin-top: 4em; 
+		width: 750px; 
+		text-align: center; 
+		position: relative;
+		transition: all .3s ease-in-out;
+	}
+
+	#additional_highlights{
+	}
+
+	#footer{
+/*	    background-color: orange;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    height: 100px;
+	    width: 100%;
+	    overflow:hidden;*/
+		position: absolute;
+		bottom: 0;
+		margin-right: auto;
+		margin-left: auto;
+		width: 400px;
+		text-align: center;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+	}
+
+
+	.grid{
+		text-align: center;
+	}
+
+	.row{
+		text-align: center;
+		margin: auto;
+		display: inline-block;
+		
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	/* Create two equal columns that floats next to each other */
+	.column {
+	display: inline-block;
+	width: 32%;
+	padding: 10px;
+	margin-top: 0px;
+	vertical-align: text-top;
+	transition: opacity 300ms, transform 300ms;
+	}
+
+	@media (max-width: 750px) {
+	    td {
+	        display: block;
+
+	    }
+	    table td {
+	    	border-left: none;
+	    }
+
+	    #homepage_messages {
+	    	width: 300px;
+	    }
+
+	    #loggedin_links {
+	    	width: 250px;
+	    }
+
+	    #title_card {
+	    	width: 325px;
+		}
+
+		.grid-wrapper {
+			display: initial;
+		}
+
+		.column{
+			width: 100%;
+		}
+
+}
+
+	sup {
+    	vertical-align: top; position: relative; top: 1em; font-size: small;
+	}
+
+	.shadow {
+		-moz-box-shadow: 0 0 30px 5px #222;
+		-webkit-box-shadow: 0 0 30px 5px #222;
+		}
+
+/*	#content{
+            padding-top: 0em;
+    }*/
+    input[type="text"]{
+	    width: 300px;
+	    padding: 15px 0 15px 12px;
+	    font-weight: 600;
+	    border: none;
+	    outline: none;
+	/*    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);*/
+	    border: 0.5px solid #FFEECC;
+	    border-radius: 4px;
+	/*    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);*/
+	/*    text-indent: 60px;*/
+	    transition: all .3s ease-in-out;
+	    position: relative;
+	    font-size: 13px;
+	    color: #FFEECC;
+	    background-color: transparent;
+	    margin-top: 1em;
+	}
+input[type="text"]:focus{
+    text-indent: 12px;
+    box-shadow: inset 0 -5px 45px rgba(255,255,255,0.2), 0 1px 1px rgba(100,100,100,0.0);
+    color: white;
+}
+
+input[type="text"]:hover{
+    box-shadow: inset 0 -5px 45px rgba(255,255,255,0.2), 0 1px 1px rgba(100,100,100,0.0);
+}
+
+.sq-button {
+	color: #FFEECC;
+    background-color: transparent;
+    text-align: center;
+    border: 1px solid #FFEECC;
+    padding-top: 1em; 
+    padding-right: calc(1.44em - 0.2em);
+    padding-bottom: 1em;
+    padding-left: 1.44em;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    margin-right: 1em;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+.sq-button:hover {
+	color: #FFEECC;
+	box-shadow: inset 0 -5px 45px rgba(255,255,255,0.2), 0 1px 1px rgba(100,100,100,0.0);
+}
+
+</style>
+
+
+
+<style>
+	canvas { margin:0; padding:0; }
+	#container {
+	  overflow:hidden;
+	  position:fixed;
+	  height: 100%;
+	  width: 100%;
+	  pointer-events: none;
+	}
+
+	#pixie {
+	  z-index:10;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  pointer-events: none;
+	}
+</style>
+
+
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          min-width: 980px
+          width: 100%;
+        }
+
+        nav
+        {
+           position: fixed;
+           top: 0px;
+           background-color: white;
+           width: 100%;
+           z-index: 2;
+        }
+
+        .topnav {
+          overflow: hidden;
+          /*background-color: #333;*/
+          margin: 1em;
+        }
+
+        #content{
+            padding-top: 4em;
+            width: 100%;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #606060;
+          text-align: center;
+          padding: 14px 16px;
+          /*text-decoration: none;*/
+          font-size: 17px;
+          margin-right: 2em;
+        }
+
+
+        .topnav a.homepage{
+            color: #FFEECC;
+            margin-right: unset;
+        }
+
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+        }
+
+        .topnav a.homepage:hover{
+            color: white;
+        }
+
+        .topnav a.active {
+          color: black;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+
+
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+          .topnav a.homepage {
+            float: unset;
+          }
+        }
+
+
+        /* Underline styles */
+        .topnav a {
+          display: block;
+          position: relative;
+          padding: 0.2em 0;
+          text-decoration: none;
+        }
+
+        /* Fade in */
+        .topnav a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: grey;
+          /*background: linear-gradient(to right, #4FAEEA, #4EAD5B, #4FAEEA);*/
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .topnav a.homepage::after {
+            background-color: rgba(238,180,28,1);
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        .topnav a::after {
+          opacity 1;
+          transform: scale(0);
+          transform-origin: center;
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after{
+          transform: scale(1);
+        }
+
+        .rcorners{
+            border-radius: 25px;
+        }
+
+        .card{
+            /*border: 3px solid lightblue;*/
+            padding: 15px;
+            list-style-type: none;
+            margin: 1em;
+/*            width: 430px;*/
+
+        }
+
+        #nav-logout {
+            display: none;
+        }
+
+        body.logged-in #nav-logout {
+            display: block;
+        }
+
+        @media screen and (max-width: 1000px) {
+             body.logged-in #nav-logout {
+                 display: none;
+             }
+             .topnav.responsive #nav-logout.active {
+                 display: block;
+             }
+             
+             /* Responsive rule ensures it appears when menu is open */
+             .topnav.responsive #nav-logout {
+                  display: block;
+                  float: none;
+                  text-align: left;
+             }
+        }
+    </style>
+    
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP722B0P6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NP722B0P6Z');
+</script>
+
+<body>
+    <nav>
+        
+    </nav>
+    <div id="content" name="content">
+	
+
+<div id="ivy-right" style="position: fixed; left: 30%;">
+	<!-- <img referrerpolicy="no-referrer" src="static/images/ivy-right.png"> -->
+</div>
+<div id="ivy-left" style="position: fixed; left: 40%">
+	<!-- <img referrerpolicy="no-referrer" src="static/images/ivy-left.png"> -->
+</div>
+
+
+
+<div id="container">
+  <canvas id="pixie"></canvas>
+</div>
+
+
+
+
+
+<!-- <div style="text-align: center; position:fixed; width: 100%; z-index: -2; background-color: rgba(50,50,50,.7); background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,  url('static/images/ivy.png'); height: 100vh; pointer-events: none;"> 
+</div>-->
+
+<div id="home-content" style="margin-left: auto; margin-right:auto; left: 0; right: 0; top: 15%;">
+	<div id="title_card" class="shadow">
+		<div style=" color: white;">
+			<br/>
+			<span style="font-family: 'Great Vibes'; font-size: xxx-large; ">Dylan & Tyler</span><br/><br/>
+			<span style="font-family: 'Mukta'; font-size: xx-large; ">OCTOBER&nbsp;&nbsp;5<!--<sup>th</sup>-->,&nbsp;&nbsp;2024<br/></span>
+			<span style="font-family: 'Mukta'; font-size: x-large; ">TOPANGA CANYON,&nbsp;&nbsp;CA</span>
+			<br/>
+			<br/>
+		</div>
+	</div>
+
+	<div id="homepage_messages" class="public-only">
+		<div>
+				
+			</div>
+			</div>
+			<div id="loggedin_links">
+				Welcome to our wedding site.<br><br>
+				<table style="margin-right: auto; margin-left: auto; left: 0; right: 0;">
+					<tr class="topnav">
+						<td><a class="homepage" href="details.html">Details</a></td>
+						<td><a class="homepage" href="rsvp.html">RSVP</a></td>
+						<td><a class="homepage" href="registry.html">Registry</a></td>
+						<td><a class="homepage" href="our_story.html">Our Story</a></td>
+						<td><a class="homepage" href="travel.html">Travel</a></td>
+						<td><a class="homepage" href="faq.html">FAQ's</td>
+						<td><a class="homepage" href="marriage_equality.html">🏳️‍🌈 Marriage Equality</a></td>
+						<td class="secured-content"><a class="homepage" onclick="logoutUser()" style="cursor: pointer;">Logout</a></td>
+					</tr>
+				</table>
+				<br>
+			</div>
+			<div style="margin-bottom: 2em; margin-top: 0em; z-index: 1; position: relative;">
+				<div id="public_teaser">
+					<div class="grid-wrapper">
+						<div>
+							<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/086.jpg" alt="" />
+						</div>
+					<div class="wide">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/118.JPG" alt="" />
+					</div>
+					<div class="tall">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/174.JPG" alt="">
+					</div>
+					<div class="wide">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/179.JPG" alt="" />
+					</div>
+					<div class="big">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/139.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/161.JPG" alt="" />
+					</div>
+					<div class="big">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/194.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/061.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/320.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/330.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/336.JPG" alt="" />
+					</div>
+					<div class="wide">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/352.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/257.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/408.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/447.JPG" alt="" />
+					</div>
+					<div class="wide">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/537.JPG" alt="" />
+					</div>
+					<div>
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/559.JPG" alt="" />
+					</div>
+					<div class="wide">
+						<img referrerpolicy="no-referrer" src="https://dylanandtylerwedding.netlify.app/highlights/568.JPG" alt="" />
+					</div>
+				</div>
+				<p style="font-family: 'Mukta'; font-size: x-large; color: #FFEECC; text-align: center;">
+					<strong>Wedding Guests, Use Your Invitation Details to See More Memories</strong>
+				</p>
+				</div>
+				<div id="login_form" class="public-only" style="text-align: center;">
+					<input id="last_name" type="text" placeholder="Last Name"><br>
+					<input id="zip_code" type="text" placeholder="Your Zip Code" maxlength="5"><br><br>
+					<span id='find-button' class='sq-button'>Find</span>
+				</div>
+				<br>
+				<div id="loading-message" style="color: white; text-align: left; min-height: 100px; "></div>
+				<div id="additional_highlights" class="secured-content">
+					<div style="text-align: center;">
+						<div style="padding:44.69% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1040940326?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="10.05.2024 - Dylan &amp; Tyler Highlight 5-1080-web"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+					</div>
+					<br>
+					<div class="grid-wrapper">
+						<div class="wide">
+							<img referrerpolicy="no-referrer" style="object-position: bottom;" src="https://lh3.googleusercontent.com/pw/AP1GczO3A9XPZb1uW97os-jHnhMV3C59BgarEIX497VwIQ4ptMIm2xtFmZKQT-ndasZ_gNL79ZAe3Mi2L8uCmuSMZaK770LYwNWVJ8NYm6ueRNQHRNbJs4H7D21SAji55OyESLJutbJd1lYGtilXR_8EUk_rUg=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczMq8ONxc464rp0H3zDWoL05N-P5AjQC2aU_P52E5HAydnh2g5iPsTW4kCdl5cNTG3iWeBsNuGCQO4KFi2hdpuVhNSID9fTC70cy9ElT1SGPCXCVrMEWpOAlW1M9XPBQ0nnL1vhsgB2yDXhGplFH_b6K7g=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div class="">
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczP1pyFQ0-AsqhlwwIJ2h3teUcSSyao9pl1yS8F70TvsV1UR2PdkpScocrKGr-y-nmjVdZudOKCv1RNdHxzR77zKHQOeO3qp6hSTnVEerVkXHQce5EMQpCQHvdCHEIGjHETfb6pezsWz8u-nIzL3h64pyw=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div class="">
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczMc-y3Y9FyhQ0MkJiL1UMfpDRksKT2sxkjBoebYmFEVrLdhDLvKwcgDPGO0p3ea1XWtGFJx0oMYLnc34hJdJ5wBHUBom6VsjcS0qzL2hzW37szH5WCskA_akySF8N1wh53G7nQ6A95D2vI6v72Gd7S8QA=w1090-h727-s-no?authuser=0" alt="">
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczO3QlC0U8wODchAAPGTEfVvnnSFm6o0gZNRBMsykq7iAvTjMKvarO8qJdCFl43hOmpZCeLvAo49W98gixGWXSffFph1zBCMYrB0YTQvs3OTwEgPG_9wCfkkFYdFeHLB6XflvTzP5C0TfHSzk88h4WCykQ=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczPiZ15N92SOCKViG2C3VjDLn0t90G5cjafEaokYVB_Lc2EnNkxXNiPUnxHiDmQS_CpWsSsJ2ajEPceLmmd4LTCbtqMDRHBmLmaESnbImeABip3GWR7gNDfletRSohMc3X02MfSE5NPP36KEJP5FIB_JpA=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczOf70q8eaYELNXYVp6ccw-NqzwE2eVldHJrVANmb5s6ks05y5bBfuJ5Qq_cYB191oedApT7NpmBT4kwz-YC7TGkYLjPBvjbEBwo28anDUnMk7T_TCbtuAHPmF5tpe5mXmmQ8aJ4MiAuWcCr2o_sKv5x_A=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div class="big">
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczPe8u___b9AGnIdybM721TUKPaoiyyqzZ-WBLHYgMd-dlVv4G6Yswg3nxLjBiPMpevtvTIqVBNmm7eVfnvrKc0nUm1QzboS8DR07WkTdA59TwFmtY2_NgrMqF1HrH5fao0sIOLy6cdM94xrNc6F-C0mOQ=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div class="tall">
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczMXbixfzLzoXJFWtibXq2E-85s0hE3rVVsiuPdHVE7tWf8WqnhlR0lDdiWRoL06zxV9fYhyWt0IbPrXXbNBruShhUBSMbYGPmaECEIOwdB17jS8Ud2tTXfj9Y_tfj6nV_TQhFoimdhcSwHkoXLYu8pAqw=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczODMHRgpmvqTRd-ExXt9zTaTXNCKwi9ZjudVPuJQVzCu6Rc3Vp6-1jDMs_B16-rmzIUGryC-tgoviqjsgaQMl6cBX1XIH5eJWEslblPLAi8z9NXH_XvUQK2ZpkpqSTU1AnM_A4wTSF0T7bJUfo_UrDLlQ=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczN7-bYr8MBUuPleB0Ec_g3UblVS2S-u7i2hT1Dsj3cIicBDeURUsirfJRqWYY-uzuqURHSO2ytCNoUG8AQMUMsvF9Ca-RGDqOHIug7cknRRaB96-mFlJQ_P-KWBteQgYbRu65tptKqS5oWApd1-aC72aQ=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczNkU_f_pZfRKvk0bHs9Cbckzvk39nixiuH4YHabfTQ9kzgT8V6NdwKFo8fZj71bD8c7Gai31pA7pKCV1fG3dtebflIDgtNw0m_4yKiuGKRIytVN0HBeToZG0jioRZN4iIGmHAbcA9oUkHdp1g1Yh6ROlQ=w1090-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczM_9xgRFeLXTDC9Nm1hkcuvWk18jbJzVd4bZRrttw49cG1Oqj6C_J-q13q1mMgjczO3YD5-87QZuuplWWGf7T5eOgFOOwbwNxSODr0uAgCcsZQxXLrGJFdmR8Jg98sO-50pQC1iscg33yd_CnH-g9ZegA=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczMbn42U1HyfVS-jP_ROWamiSykbuHuYYU9ZHXCAmkJBHIC8IJC-fd-o3gJ3aJ8vNckK0UtredFQYwqpSP8MMA6xs8Bi_pFvY_nXutqLeyoR0Jv0JyP9YtJSchI0wazDJzVNxo2GyWPzJZ73uugNSKPxYQ=w1091-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczPBM9l7JOOYRR-xtRw9PGGedGtDduZoZdbYLKoT4dkgVxu02PCWL5MBQPzexKsuXpWxZzTXs2jnbtVsjJxcK1XBJjjnPWrrRh8UwNri16ffP0h1sq8gkWxRu2ucdr_1vXt7MBQ4h5c7AbK8SenurEreZQ=w1090-h727-s-no?authuser=0" alt="" />
+						</div>
+						<div>
+							<img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/pw/AP1GczMWoSrgbxJFFHNTGSL7XYmxHAw9g9rVacxsALY9o9dDnTdZ0WddMYUd_ae1fft6m1PEnxcZHUAN2J8QJ5q53Ua0WYBpgqQ8xtysnYlcWAMnjwPix5DneRkmcT_JwmJpEeR2rZ96ScPvV99W5FVvcjz-8Q=w1090-h727-s-no?authuser=0" alt="" />
+						</div>
+					</div>
+					<br>
+					<div style="font-family: 'Mukta'; font-size: large; color: #FFEECC; text-align: center;" class="grid">
+						<div class="column">
+							<strong>View, Like, and Comment on 800+ Professional Wedding Photos</strong><br>
+							<a href="https://photos.app.goo.gl/Fq3dfLYw6PA3JSkL6" target="_blank">
+								<img referrerpolicy="no-referrer" style="border-radius: 25px; width: 350px; border: 3px solid white;" src="https://lh3.googleusercontent.com/pw/AP1GczPeln4gJwj64N1OW5A73FJxK0EBNrn_MIxxQI4FJw2pvMH6gmnKgTfANCkE19Z5i7y6kAKSUim57CBPmi2O1VFVXOUGoG2tMW8uKqP5vNDayLIompB5zUuxSLZb5h2KvkVWoTKNPrFKvHNuo3EK5lQjkQ=w1169-h779-s-no?authuser=0">
+							</a><br>
+							Contact us if you are intersted in getting high quality files for printing.
+						</div>
+						<div class="column">
+							<strong>Add and View Personal Photos from our wedding and related events!</strong><br>
+							<a href="https://photos.app.goo.gl/N4ybDrzTnBAukJ1K9" target="_blank">
+								<img referrerpolicy="no-referrer" style="border-radius: 25px; width: 350px; border: 3px solid white;" src="https://lh3.googleusercontent.com/pw/AP1GczPWkgpFU7PQnezDjb5TdKD65EbD4QXgsJICQfLBX9xbfSV8RgO9bDUdd9NLK_V0q6UU-3Lbj6iCXTeV1657ZbyRxxjYbLs5G5BjN2dX_AlU-MRW04XmqQGAj4t5wQqN8QtGlNb5sH4hWOJc3Ds7dcL59A=w1116-h837-s-no?authuser=0">
+							</a>
+						</div>
+						<div class="column">
+							<strong>Find Your Photos from the Photobooth!</strong><br>
+							<a href="https://photos.app.goo.gl/Jf7Q8vQAShCuBgxh9" target="_blank">
+								<img referrerpolicy="no-referrer" style="border-radius: 25px; width: 350px; height: 250px; border: 3px solid white; object-fit: cover;" src="https://lh3.googleusercontent.com/pw/AP1GczNAWakLPHZfAe1xLkmHPqxSjYBTVeRu2bTX3TlJhcWgoYfVFixwMjxENLnhkb4sScPrdFJ46dsdwNWIlPHSRIicyBcZSjCggCZlBHI8AJftgWMZMrcTLoysae9o1wJG0CW2e5Ll6MvUDpU27b3yv7o-zQ=w558-h837-s-no?authuser=0">
+							</a>
+						</div>
+					</div>
+					<br>
+
+				</div>
+				
+
+				<p style="font-family: 'Mukta'; font-size: x-large; color: #FFEECC; text-align: center;">
+					<strong>Thank you to our Wedding Team!</strong><br>
+					<strong>Venue:</strong> <a href="https://www.innoftheseventhray.com/" target="_blank">Inn of the Seventh Ray</a> - <a href="https://www.instagram.com/innofthesevenththrayweddings/" target="_blank">@innofthesevenththrayweddings</a><br>
+					<strong>Venue Coordinator:</strong> Amanda/<a href="https://www.saltandsparrow.com/" target="_blank">Salt & Sparrow</a> - <a href="https://www.instagram.com/salt_and_sparrow/" target="_blank">@salt_and_sparrow</a><br>
+					<strong>Photography:</strong> <a href="https://nicolegoddard.com/" target="_blank">Nicole Goddard</a> - <a href="https://www.instagram.com/nicolegoddard/?hl=en" target="_blank">@nicolegoddard</a><br>
+					<strong>Video:</strong> <a href="https://theidophotography.com/" target="_blank">I Do Photography</a> <br>
+					<strong>DJ:</strong> Keith with <a href ="https://www.extremedjservice.com/portfolio-items/keith-campbell/?portfolioCats=44" target="_blank">Extreme DJ</a><br>
+					<strong>Officiant:</strong> <a href="http://www.weddingofficiantla.com/" target="_blank">Deidra Gray-Breijo</a> - <a href="https://www.instagram.com/weddingofficiantla/" target="_blank">@weddingofficiantla</a><br>
+					<strong>Rings: </strong><a href="https://www.joelsfinejewelry.com/" target="_blank">Joel's Fine Jewelry</a><br>
+					<strong>Florals:</strong> <a href="https://www.kreativehands.com/" target="_blank">Kreative Hands</a> - <a href="https://www.instagram.com/kreative.hands/" target="_blank">@kreative.hands</a><br>
+					<strong>Transportation:</strong> <a href="https://riztransportation.com/" target="_blank">Riz Transportation Services</a> <br>
+					<strong>Printing:</strong> <a href="https://minuteman.com/us/locations/ca/northridge/" target="_blank">Minuteman Press Northridge</a><br>
+					<strong>Maker Space:</strong> <a href="https://www.socialmedium.space/" target="_blank">Social Medium</a> <br>
+					<br>
+				</p>
+		</div>
+
+	</div>
+</div>
+
+
+<div id="footer" style="font-family: sans-serif;font-size: small; display: flex; align-items: center; justify-content: center;">
+    <span style="color: #A5A5A5">Copyright &copy; <script>document.write(new Date().getFullYear())</script></span>&nbsp;
+    <span style="color: #4EAD5B">Dylan</span>
+    <span style="color: #A0CE63">And</span>
+    <span style="color: #4FAEEA">Tyler</span>
+    <span style="color: #A5A5A5">.com</span>
+</div>
+
+
+
+<script type="text/javascript">
+	// $(window).scroll(function(){
+    // 	$("#ivy-left").css("left",Math.max(0,250-$(this).scrollTop()));
+    // 	$("#ivy-left").css("top",Math.max(0,250-$(this).scrollTop()));
+	// });
+	let ivyleft = document.querySelector("#ivy-left");
+	let ivyright = document.querySelector("#ivy-right");
+
+	let ivyLeftXInitial = ivyleft.getBoundingClientRect().x;
+	let ivyLeftYInitial = ivyleft.getBoundingClientRect().y;
+
+	let ivyRightXInitial = ivyright.getBoundingClientRect().x;
+	let ivyRightYInitial = ivyright.getBoundingClientRect().y;
+
+	window.addEventListener("scroll", function(e){
+		let total = $(document).height();
+
+		let current= window.scrollY;
+
+		let per = (current/total);
+
+		ivyleft.style.left = -(ivyLeftXInitial * per * 4.0) + ivyLeftXInitial +  "px";
+		ivyleft.style.top = -(ivyLeftYInitial *  per * 2.0) + ivyLeftYInitial +  "px";
+
+		ivyright.style.left = (ivyRightXInitial * per * 1.8) + ivyRightXInitial +  "px";
+		ivyright.style.top = (ivyRightYInitial * per * 0.2) + ivyRightYInitial +  "px";
+	});
+</script>
+
+<script type="text/javascript">
+	// Auth logic is now in auth.js
+</script>
+
+<!-- https://codepen.io/andrewreifman/pen/AogOzJ -->
+<script type="text/javascript">
+	var WIDTH;
+	var HEIGHT;
+	var canvas;
+	var con;
+	var g;
+	var pxs = new Array();
+	var rint = 50;
+
+	$(document).ready(function(){
+	  WIDTH = window.innerWidth;
+	  HEIGHT = window.innerHeight;
+		$('#container').width(WIDTH).height(HEIGHT);
+		canvas = document.getElementById('pixie');
+		$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
+		con = canvas.getContext('2d');
+		for(var i = 0; i < 50; i++) {
+			pxs[i] = new Circle();
+			pxs[i].reset();
+		}
+		setInterval(draw,rint);
+		//setInterval(draw,rint2);
+
+	});
+
+	function draw() {
+		con.clearRect(0,0,WIDTH,HEIGHT);
+		for(var i = 0; i < pxs.length; i++) {
+			pxs[i].fade();
+			pxs[i].move();
+			pxs[i].draw();
+		}
+	}
+
+	function Circle() {
+		this.s = {ttl:8000, xmax:5, ymax:2, rmax:10, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
+
+		this.reset = function() {
+			this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
+			this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
+			this.r = ((this.s.rmax-1)*Math.random()) + 1;
+			this.dx = (Math.random()*this.s.xmax) * (Math.random() < .5 ? -1 : 1);
+			this.dy = (Math.random()*this.s.ymax) * (Math.random() < .5 ? -1 : 1);
+			this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
+			this.rt = Math.random()*this.hl;
+			this.s.rt = Math.random()+1;
+			this.stop = Math.random()*.2+.4;
+			this.s.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+			this.s.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+		}
+
+		this.fade = function() {
+			this.rt += this.s.rt;
+		}
+
+		this.draw = function() {
+			if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
+			else if(this.rt >= this.hl) this.reset();
+			var newo = 1-(this.rt/this.hl)*0.5;
+			con.beginPath();
+			con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+			con.closePath();
+			var cr = this.r*newo;
+			g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+			g.addColorStop(0.0, 'rgba(238,180,28,'+newo+')');
+			g.addColorStop(this.stop, 'rgba(238,180,28,'+(newo*.4)+')');
+			g.addColorStop(1.0, 'rgba(238,180,28,0)');
+			con.fillStyle = g;
+			con.fill();
+		}
+
+		this.move = function() {
+			this.x += (this.rt/this.hl)*this.dx;
+			this.y += (this.rt/this.hl)*this.dy;
+			if(this.x > WIDTH || this.x < 0) this.dx *= -1;
+			if(this.y > HEIGHT || this.y < 0) this.dy *= -1;
+		}
+
+		this.getX = function() { return this.x; }
+		this.getY = function() { return this.y; }
+	}
+</script>
+
+
+
+    </div>
+
+    
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="static/js/auth.js?v=3"></script>
+</body>
+</html>

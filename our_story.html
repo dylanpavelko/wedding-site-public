@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Our Story - Dylan & Tyler's Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="mask-icon" type="image/png" href="static/images/td_icon.svg" />
+    <link rel="stylesheet" href="static/css/auth.css?v=2">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<style>
+	#main{
+		margin: 1em; 
+		margin-right: 4em; 
+		margin-left:4em;
+	}
+
+	/* Clear floats */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both
+	}
+
+	/* 2/3 column */
+	.column-66 {
+	  float: left;
+	  width: 66.66666%;
+	  padding: 20px;
+	  min-height: 30em;
+	}
+
+	/* 1/2 column */
+	.column-50 {
+	  float: left;
+	  width: 50%;
+	  padding: 20px;
+	}
+
+	/* 1/3 column */
+	.column-33 {
+	  float: left;
+	  width: 33.33333%;
+	  padding: 20px;
+	}
+
+	.first_text {
+	  text-align: center;
+	}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-50,
+  .column-33 {
+    width: 100%;
+    min-height: auto;
+    padding: 5px;
+  }
+
+  #main{
+  	margin-right: 1em; 
+	margin-left:1em;
+  }
+
+  .first_text{
+  	text-align: center;
+  	margin-left: -30px;
+  }
+
+  #blossom_container{
+  	height: 100%;
+  }
+}
+
+
+.petal {
+	background: url(/static/images/cherry-blossom.png) no-repeat;
+}	
+.petal-style1 {
+		width: 45px;
+		height: 20px;
+		background-position: -31px 0;
+	}
+.petal-style2 {
+		width: 42px;
+		height: 22px;
+		background-position: 0 -23px;
+	}
+.petal-style3 {
+		width: 37px;
+		height: 24px;
+		background-position: 0 -50px;
+	}
+.petal-style4 {
+		width: 26px;
+		height: 34px;
+		background-position: -49px -35px;
+	}
+}
+
+
+#container {
+  height:350px; 
+  position:relative; 
+  overflow:hidden;
+  background-color: red;
+}
+
+.photobanner {
+  height:350px;
+  position:absolute; 
+  background-color: grey;
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 300s linear infinite;
+}
+
+.photobanner img {    
+  margin: 0 0.5em 
+}
+
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+
+#container:hover {
+   overflow: auto;
+}
+
+#container:hover .photobanner {
+   animation-play-state:paused;
+}
+</style>
+
+
+<script type="text/javascript">
+
+</script>
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          min-width: 980px
+          width: 100%;
+        }
+
+        nav
+        {
+           position: fixed;
+           top: 0px;
+           background-color: white;
+           width: 100%;
+           z-index: 2;
+        }
+
+        .topnav {
+          overflow: hidden;
+          /*background-color: #333;*/
+          margin: 1em;
+        }
+
+        #content{
+            padding-top: 4em;
+            width: 100%;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #606060;
+          text-align: center;
+          padding: 14px 16px;
+          /*text-decoration: none;*/
+          font-size: 17px;
+          margin-right: 2em;
+        }
+
+
+        .topnav a.homepage{
+            color: #FFEECC;
+            margin-right: unset;
+        }
+
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+        }
+
+        .topnav a.homepage:hover{
+            color: white;
+        }
+
+        .topnav a.active {
+          color: black;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+
+
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+          .topnav a.homepage {
+            float: unset;
+          }
+        }
+
+
+        /* Underline styles */
+        .topnav a {
+          display: block;
+          position: relative;
+          padding: 0.2em 0;
+          text-decoration: none;
+        }
+
+        /* Fade in */
+        .topnav a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: grey;
+          /*background: linear-gradient(to right, #4FAEEA, #4EAD5B, #4FAEEA);*/
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .topnav a.homepage::after {
+            background-color: rgba(238,180,28,1);
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        .topnav a::after {
+          opacity 1;
+          transform: scale(0);
+          transform-origin: center;
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after{
+          transform: scale(1);
+        }
+
+        .rcorners{
+            border-radius: 25px;
+        }
+
+        .card{
+            /*border: 3px solid lightblue;*/
+            padding: 15px;
+            list-style-type: none;
+            margin: 1em;
+/*            width: 430px;*/
+
+        }
+
+        #nav-logout {
+            display: none;
+        }
+
+        body.logged-in #nav-logout {
+            display: block;
+        }
+
+        @media screen and (max-width: 1000px) {
+             body.logged-in #nav-logout {
+                 display: none;
+             }
+             .topnav.responsive #nav-logout.active {
+                 display: block;
+             }
+             
+             /* Responsive rule ensures it appears when menu is open */
+             .topnav.responsive #nav-logout {
+                  display: block;
+                  float: none;
+                  text-align: left;
+             }
+        }
+    </style>
+    
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP722B0P6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NP722B0P6Z');
+</script>
+
+<body>
+    <nav>
+        
+            <div class="topnav" id="myTopnav">
+                <a  href="index.html">
+                    <span style="color: #4EAD5B">Dylan</span><span style="color: #A0CE63">And</span><span style="color: #4FAEEA">Tyler</span><span style="color: #A5A5A5">.com</span>
+                </a>
+                <a  href="details.html">Details</a> <!-- Countdown, Location, Schedule -->
+                <a  href="rsvp.html">RSVP</a>
+                <a  href="registry.html">Registry</a>
+                <a  class="active"  href="our_story.html">Our Story</a>
+                <!-- <a>Wedding Party</a> -->
+                <a  href="travel.html">Travel</a> 
+                <a  href="faq.html">FAQ's</a>
+                <a  href="marriage_equality.html">🏳️‍🌈 Marriage Equality</a>
+                <a id="nav-logout" style="float: right; cursor: pointer; display: none;">Logout</a>
+                <!--<a>Land Acknowledgement</a>-->
+                <!-- 
+                <a>After Event</a>
+                <a>Photos</a>
+                <a>> Professional</a>
+                <a>> Photobooth</a>
+                <a>> Social </a> -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
+        
+    </nav>
+    <div id="content" name="content">
+	
+
+<div id="main">
+	<div><h3>Our Story</h3></div>
+	<div class="secured-content">
+		<div class="row">
+			<div class="column-66">
+			<p>
+				Like many couples in this day and age, we met on a dating app. For us, it was OkCupid. After discovering we had mutually "liked" each other we exchanged a few messages before agreeing we wanted to meet each other in person. We had our first date on July 1, 2017 at Jack's restaurant in Pleasant Hill, CA. We have no photos to mark the occasion, but dinner went well, and it was early enough that we decided to extend our date. We found a nearby bowling alley to play a couple of games. Still not ready to call it a night, we again decided to further extend our date and found an ice cream shop to get dessert. We drove back to where we had our dinner and found a Cold Stone Creamery and got our fill of ice cream. We sat outside of the ice cream shop and kept talking. Eventually the ice cream store closed so we moved from their tables and just kept talking. While we covered a lot of topics, probably many of the standard first date awkward type of questions, we also got 'real' with each other very quickly and talked about where we were in our lives, our being 'out,' what we were looking for in a relationship, and somehow managed to not scare each other away. Eventually, somewhat as a matter of practicality, we had to call it a night and parted ways with a flutter in our hearts and a foundation of open communication.
+			</p>
+      <p>
+        Included in that first conversation was how Tyler was planning on moving back to LA since he was expecting his first niece soon (which was sooner than we all thought). He had planned to transfer with his current company at the time to LA and was in the process of interviewing. But after only the first few dates, Tyler felt like he had found something special and real. So, he decided to cancel his plans to move to LA and his job transfer.
+      </p>
+      <p>
+        As we got to know each other, we learned that we actually both studied engineering at <em>Cal Poly, San Luis Obispo</em>. We were even more surprised to learn that we were on campus at the same time for two years. Did we ever walk by each other and just not notice? We’ll never know!
+        <br><br>
+        Dylan learned that after Cal Poly, Tyler went on to get his master's degree at <em>Stanford</em> before being recruited to work as a consultant where he earned his P.E. in the wastewater industry with <em>Carollo Engineers</em> in Walnut Creek.
+
+        Tyler learned that after Dylan graduated from Cal Poly, he started a job at <em>Workday</em> in Pleasanton, and though he studied Electrical Engineering in college, he was now working as a Product Manager in the software industry.
+
+      </p>
+			</div>
+			<div class="column-33 first_text">
+				<img id='first_text' src="static/images/phone.png" style="max-height: 30em;" > 
+			</div>
+		</div>
+		<div class="row">
+      <p>While the beginning of our relationship was full of fond memories, one of the first difficult milestones we encountered together was due to a surgery. Dylan’s tonsils had been posing some health risks to the point that his doctors recommended having them removed — a more complex and painful operation as an adult than compared to when it’s performed on a child. Tyler re-organized his life around being able to be there and support Dylan during his recovery, not once...but twice! For as we drove to the surgery appointment the first time, full of anxiety, we received a call that the surgery would have to be postponed as the doctor was feeling sick. The recovery truly wasn’t fun, but Tyler temporarily moved himself and his cats to Dylan’s house for about two weeks and ensured that Dylan was well cared for, entertained friends and family who visited, and that Dylan got his pain meds every few hours!
+      </p>
+      <p>
+      It was also around this time that we approached six months of dating, and Tyler’s lease on his apartment was coming up. During a hike in the redwoods, we had a conversation about our relationship. We both liked where things were going, but also didn’t want to rush through it based on some external timeline, i.e., Tyler’s lease agreement. We agreed to keep driving to each other's house and that when the time felt right, even if it meant breaking a new lease agreement (which thankfully he never actually needed to sign), we would progress our relationship on our own timeline. We took this step about six months later, just shy of a year of dating, when Tyler, Dexter, and Casper (Tyler’s cats) moved into Dylan’s home in Oakland.  
+      </p>
+    </div>
+		<div class="row" style="height:350px;">
+      <div id="container">
+        <div class="photobanner">
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-33 ">
+        <img src="static/images/nieces.png" width="100%" class="rcorners" style="overflow: hidden;"> 
+      </div>
+      <div class="column-66">
+      <p>
+        As time progressed and our lives and relationship continued to grow, everything seemed to be going well, but there was something missing. One of the very first facts Dylan learned about Tyler from his original OKCupid profile was that the three most important things to him were family, family, family, and his family was growing. At this point his sister and brother-in-law had welcomed two new baby girls into the world and we knew that living across the state would mean the majority of our vacations would be traveling to southern California. Even still, we would be missing out on many of the ‘smaller moments’ of the kids growing up. This was a difficult decision for us as a couple to uproot our lives that we built in the Bay Area, but we ultimately decided – together – that it was the right decision for us.
+      </p>
+      <p>
+        Our minds made up, Tyler found a new job and was hired by <em>The Metropolitan Water District of Southern California</em>, Dylan got approval from his job at <em>Workday</em> to work remotely with the expectation of semi-frequent travel, and we searched around LA to find a local ‘trendy’ spot to live. We landed on Sherman Oaks - close enough to family, Tyler’s work, and also really close to some fun activities, like restaurants, bars, and theaters. We made the move in December 2019. For the first two months, we got settled and had some fun in the trendy city.
+      </p>
+      </div>
+    </div>
+		<div class="row">
+      <div class="column-66">        
+        <p>Like most people, our lives looked completely different once COVID hit. Dylan went from travelling for work several times a month to having all travel halted, and Tyler shifted (temporarily) from working full-time in the office to full-time at home. The apartment we thought would be a waystation hub for us between exploring the trendy restaurants of the area quickly became our 24/7 living and working arrangement as we tried to stay sane in-between waiting in lines at the grocery store.
+        </p>
+        <p>
+          During the height of the pandemic, we were really anxious to move into a bigger space that ideally would have a good-sized backyard! In August of 2020, we were extremely fortunate to find our new home in a quaint neighborhood of Woodland Hills. The house needed work and the escrow process was a mess. But it had a great lot size, was in a good neighborhood, and was close to family, shops, the freeway, and Tyler’s work. It really checked all the boxes.   
+        </p>
+      </div>
+      <div class="column-33 ">
+        <img id='first_text' src="static/images/homeowners.jpg" width="100%" class="rcorners" > 
+      </div>
+    </div>
+		<div class="row">
+      <div class="column-50">
+        <img src="static/images/beekeepers.jpg" width="100%" class="rcorners" style="overflow: hidden;"> 
+      </div>
+      <div class="column-50">
+        <p>
+          One of the earlier things we started looking into once we had our new backyard was the idea of keeping our own honeybees. We had previously done a one-day workshop about beekeeping in San Francisco, and I guess you could say ‘we got the bug!’ We joined the Los Angeles County Beekeepers Association, and the next spring found ourselves suited up learning the ins and outs with two colonies of bees living in our backyard (in hives we had built by hand). If we haven’t talked your ear off about bees already, consider yourself lucky! But if you are a glutton for punishment and have some time to kill, just get us going and we will gladly inundate you with a ton of facts about these fascinating creatures!  
+        </p>
+        <p>
+          The next big chapter of our, still in relative quarantine life, was construction. We bought our house because we thought it had ‘good bones,’ but we always knew there were some immediate updates we wanted to make. Was all of the headache of living in a construction site for three-quarters of a year worth it? Absolutely! Did we fully understand just how big of a headache it would be? Absolutely not!
+        </p>
+      </div>
+    </div>
+		<div id="blossom_container" class="row" style="background: lightblue;">
+			<div class="column-66">
+        <p>
+  				We went on our first international trip since COVID in Spring 2023 to Japan, right at the tail end of the cherry blossom season. During the first leg of our journey, while in Tokyo after doing a traditional indigo dyeing workshop, we went to the Botanical Gardens of the Imperial Palace. 
+        </p>
+        <p>
+          <em><strong>(Tyler’s perspective)</strong> We arrived at the gates of the Imperial Palace, got our bags checked, showed our tickets, and walked in. To me, it was just another stop in our journey until our fun fancy dinner was planned for later that evening. Little did I know Dylan had a plan. I aimlessly walked from one location to another, but Dylan seemed anxious to get to the garden. We were getting close to our dinner reservation time, so I just thought he wanted to squeeze in the gardens long enough to enjoy the sun before we had to walk to dinner.
+        </p>
+        <p>
+          We meandered around, saw some nice flowers and ponds and eventually made our way past a waterfall and onto a secluded bench. We were talking about whatever when a small worm fell on me. I tried to figure out what kind of worm this was. Once we were done with that, we set the worm free in the nearby garden. It was at this time Dylan had told me he wrote me a poem. Me, not thinking anything close to a proposal, thought it was strange but sweet. We hadn’t written cute letters or notes to each other in a while. Dylan had prepared a poem on his phone with pictures of us. As he read, I was about to start tearing up, but then he ended the poem with “I choose you!” tossed me a Pokeball, and asked me to open it. I opened it to discover a blue ring pop (my favorite flavor and color) as he proceeded to get down on one knee in front of me. He proposed! I said “Yes!” But then asked if he was serious about twenty times. I was in shock and very excited! For the rest of the evening, we went to our fancy dinner and I still couldn’t believe what had just happened. I was (and still am) so excited to call Dylan my future husband after meeting all those years ago in 2017!</em>
+        </p>
+			</div>
+			<div class="column-33">
+				<img src="static/images/engagement.jpg" width="100%" class="rcorners" style="overflow: hidden;"> 
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="public-only center-text" style="padding: 2em; text-align: center">
+		Our story is personal, and we'd like to share it with our invited guests. Please access your invitation from the <a href="index.html">homepage</a> before accessing our story.
+	</div>
+</div>
+
+
+<script type="text/javascript">
+//https://codepen.io/lima-space/pen/LWVpWO
+class Petal {
+  constructor(config) {
+    this.customClass = config.customClass || ""
+    this.x = config.x || 0
+    this.y = config.y || 0
+    this.z = config.z || 0
+    this.xSpeedVariation = config.xSpeedVariation || 0
+    this.ySpeed = config.ySpeed || 0
+    this.rotation = {
+      axis: "X",
+      value: 0,
+      speed: 0,
+      x: 0
+    }
+
+    if (config.rotation && typeof config.rotation === "object") {
+      this.rotation.axis = config.rotation.axis || this.rotation.axis
+      this.rotation.value = config.rotation.value || this.rotation.value
+      this.rotation.speed = config.rotation.speed || this.rotation.speed
+      this.rotation.x = config.rotation.x || this.rotation.x
+    }
+
+    this.el = document.createElement("div")
+    this.el.className = "petal  " + this.customClass
+    this.el.style.position = "absolute"
+    this.el.style.backfaceVisibility = "visible"
+  }
+}
+
+class BlossomScene {
+  constructor(config) {
+    let container = document.getElementById(config.id)
+    if (container === null) {
+      throw new Error("[id] provided was not found in document")
+    }
+    this.container = container
+    this.placeholder = document.createElement("div")
+    this.petals = []
+    this.numPetals = config.numPetals || 10
+    this.petalsTypes = config.petalsTypes
+    this.gravity = config.gravity || 0.8
+    this.windMaxSpeed = config.windMaxSpeed || 4
+    this.windMagnitude = 0.2
+    this.windDuration = 0
+    this.width = this.container.offsetWidth
+    this.height = this.container.offsetHeight
+    this.timer = 0
+
+    this.container.style.overflow = "hidden"
+    this.placeholder.style.transformStyle = "preserve-3d"
+    this.placeholder.style.width = this.container.offsetWidth + "px"
+    this.placeholder.style.height = this.container.offsetHeight + "px"
+    this.container.appendChild(this.placeholder)
+    this.createPetals()
+    requestAnimationFrame(this.updateFrame.bind(this))
+  }
+
+  /**
+   * Reset the petal position when it goes out of container
+   */
+  resetPetal(petal) {
+    petal.x = this.width * 2 - Math.random() * this.width * 1.75
+    petal.y = petal.el.offsetHeight * -1
+    petal.z = Math.random() * 200
+
+    if (petal.x > this.width) {
+      petal.x = this.width + petal.el.offsetWidth
+      petal.y = (Math.random() * this.height) / 2
+    }
+
+    // Rotation
+    petal.rotation.speed = Math.random() * 10
+    let randomAxis = Math.random()
+    if (randomAxis > 0.5) {
+      petal.rotation.axis = "X"
+    } else if (randomAxis > 0.25) {
+      petal.rotation.axis = "Y"
+      petal.rotation.x = Math.random() * 180 + 90
+    } else {
+      petal.rotation.axis = "Z"
+      petal.rotation.x = Math.random() * 360 - 180
+      // looks weird if the rotation is too fast around this axis
+      petal.rotation.speed = Math.random() * 3
+    }
+
+    // random speed
+    petal.xSpeedVariation = Math.random() * 0.8 - 0.4
+    petal.ySpeed = Math.random() + this.gravity
+
+    return petal
+  }
+
+  /**
+   * Calculate wind speed
+   */
+  calculateWindSpeed(t, y) {
+    let a =
+      ((this.windMagnitude / 2) * (this.height - (2 * y) / 3)) / this.height
+    return (
+      a *
+        Math.sin(((2 * Math.PI) / this.windDuration) * t + (3 * Math.PI) / 2) +
+      a
+    )
+  }
+
+  /**
+   * Update petal position
+   */
+  updatePetal(petal) {
+    let petalWindSpeed = this.calculateWindSpeed(this.timer, petal.y)
+    let xSpeed = petalWindSpeed + petal.xSpeedVariation
+
+    petal.x -= xSpeed
+    petal.y += petal.ySpeed
+    petal.rotation.value += petal.rotation.speed
+
+    let t =
+      "translateX( " +
+      petal.x +
+      "px ) translateY( " +
+      petal.y +
+      "px ) translateZ( " +
+      petal.z +
+      "px )  rotate" +
+      petal.rotation.axis +
+      "( " +
+      petal.rotation.value +
+      "deg )"
+    if (petal.rotation.axis !== "X") {
+      t += " rotateX(" + petal.rotation.x + "deg)"
+    }
+    petal.el.style.transform = t
+
+    // reset if out of view
+    if (petal.x < -10 || petal.y > this.height + 10) {
+      this.resetPetal(petal)
+    }
+  }
+
+  /**
+   * Change the wind speed
+   */
+  updateWind() {
+    // wind duration should be related to wind magnitude, e.g. higher windspeed means longer gust duration
+    this.windMagnitude = Math.random() * this.windMaxSpeed
+    this.windDuration = this.windMagnitude * 50 + (Math.random() * 20 - 10)
+  }
+
+  /**
+   * Create the petals elements
+   */
+  createPetals() {
+    for (let i = 0; i < this.numPetals; i++) {
+      let tmpPetalType = this.petalsTypes[
+        Math.floor(Math.random() * (this.petalsTypes.length - 1))
+      ]
+      let tmpPetal = new Petal({ customClass: tmpPetalType.customClass })
+
+      this.resetPetal(tmpPetal)
+      this.petals.push(tmpPetal)
+      this.placeholder.appendChild(tmpPetal.el)
+    }
+  }
+
+  /**
+   * Update the animation frame
+   */
+  updateFrame() {
+    if (this.timer === this.windDuration) {
+      this.updateWind()
+      this.timer = 0
+    }
+
+    let petalsLen = this.petals.length
+    for (let i = 0; i < petalsLen; i++) {
+      this.updatePetal(this.petals[i])
+    }
+
+    this.timer++
+    requestAnimationFrame(this.updateFrame.bind(this))
+  }
+}
+
+const petalsTypes = [
+  new Petal({ customClass: "petal-style1" }),
+  new Petal({ customClass: "petal-style2" }),
+  new Petal({ customClass: "petal-style3" }),
+  new Petal({ customClass: "petal-style4" })
+]
+
+const myBlossomSceneConfig = {
+  id: "blossom_container",
+  petalsTypes
+}
+
+const myBlossomScene = new BlossomScene(myBlossomSceneConfig)
+
+</script>
+
+    </div>
+
+    
+        <div id="footer" style="font-family: sans-serif;font-size: small; display: flex; align-items: center; justify-content: center; margin: 2em">
+            <span style="color: #A5A5A5">Copyright &copy; <script>document.write(new Date().getFullYear())</script></span>&nbsp;
+            <span style="color: #4EAD5B">Dylan</span>
+            <span style="color: #A0CE63">And</span>
+            <span style="color: #4FAEEA">Tyler</span>
+            <span style="color: #A5A5A5">.com</span>
+        </div>
+    
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="static/js/auth.js?v=3"></script>
+</body>
+</html>

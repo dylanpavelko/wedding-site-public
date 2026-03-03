@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FAQ's - Dylan & Tyler's Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="mask-icon" type="image/png" href="static/images/td_icon.svg" />
+    <link rel="stylesheet" href="static/css/auth.css?v=2">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<style>
+	.question{
+		font-size: large;
+		margin: 2em;
+	}
+
+	.answer{
+		color: grey;
+	}
+
+	.banner {
+		background-color: lightgrey;
+		color: black;
+		padding: 0.5em;
+		font-size: xx-large;
+	}
+
+	html {
+	  scroll-padding-top: 70px; /* height of sticky header */
+	}
+
+</style>
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          min-width: 980px
+          width: 100%;
+        }
+
+        nav
+        {
+           position: fixed;
+           top: 0px;
+           background-color: white;
+           width: 100%;
+           z-index: 2;
+        }
+
+        .topnav {
+          overflow: hidden;
+          /*background-color: #333;*/
+          margin: 1em;
+        }
+
+        #content{
+            padding-top: 4em;
+            width: 100%;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #606060;
+          text-align: center;
+          padding: 14px 16px;
+          /*text-decoration: none;*/
+          font-size: 17px;
+          margin-right: 2em;
+        }
+
+
+        .topnav a.homepage{
+            color: #FFEECC;
+            margin-right: unset;
+        }
+
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+        }
+
+        .topnav a.homepage:hover{
+            color: white;
+        }
+
+        .topnav a.active {
+          color: black;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+
+
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+          .topnav a.homepage {
+            float: unset;
+          }
+        }
+
+
+        /* Underline styles */
+        .topnav a {
+          display: block;
+          position: relative;
+          padding: 0.2em 0;
+          text-decoration: none;
+        }
+
+        /* Fade in */
+        .topnav a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: grey;
+          /*background: linear-gradient(to right, #4FAEEA, #4EAD5B, #4FAEEA);*/
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .topnav a.homepage::after {
+            background-color: rgba(238,180,28,1);
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        .topnav a::after {
+          opacity 1;
+          transform: scale(0);
+          transform-origin: center;
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after{
+          transform: scale(1);
+        }
+
+        .rcorners{
+            border-radius: 25px;
+        }
+
+        .card{
+            /*border: 3px solid lightblue;*/
+            padding: 15px;
+            list-style-type: none;
+            margin: 1em;
+/*            width: 430px;*/
+
+        }
+
+        #nav-logout {
+            display: none;
+        }
+
+        body.logged-in #nav-logout {
+            display: block;
+        }
+
+        @media screen and (max-width: 1000px) {
+             body.logged-in #nav-logout {
+                 display: none;
+             }
+             .topnav.responsive #nav-logout.active {
+                 display: block;
+             }
+             
+             /* Responsive rule ensures it appears when menu is open */
+             .topnav.responsive #nav-logout {
+                  display: block;
+                  float: none;
+                  text-align: left;
+             }
+        }
+    </style>
+    
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP722B0P6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NP722B0P6Z');
+</script>
+
+<body>
+    <nav>
+        
+            <div class="topnav" id="myTopnav">
+                <a  href="index.html">
+                    <span style="color: #4EAD5B">Dylan</span><span style="color: #A0CE63">And</span><span style="color: #4FAEEA">Tyler</span><span style="color: #A5A5A5">.com</span>
+                </a>
+                <a  href="details.html">Details</a> <!-- Countdown, Location, Schedule -->
+                <a  href="rsvp.html">RSVP</a>
+                <a  href="registry.html">Registry</a>
+                <a  href="our_story.html">Our Story</a>
+                <!-- <a>Wedding Party</a> -->
+                <a  href="travel.html">Travel</a> 
+                <a  class="active"  href="faq.html">FAQ's</a>
+                <a  href="marriage_equality.html">🏳️‍🌈 Marriage Equality</a>
+                <a id="nav-logout" style="float: right; cursor: pointer; display: none;">Logout</a>
+                <!--<a>Land Acknowledgement</a>-->
+                <!-- 
+                <a>After Event</a>
+                <a>Photos</a>
+                <a>> Professional</a>
+                <a>> Photobooth</a>
+                <a>> Social </a> -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
+        
+    </nav>
+    <div id="content" name="content">
+	
+
+
+<div style="margin: 1em; width: 80%; margin-left: auto; margin-right: auto">
+	
+	<h3 style="text-align: center;"><strong>Frequently Asked Questions</strong></h3>
+	<div class="secured-content">
+	<div style="text-align: center;">
+		<span><a href="#rsvp">RSVP Questions</a></span> | 
+		<span><a href="#planning">Planning Questions</a></span> | 
+		<span><a href="#venue">Venue Questions</a></span> | 
+		<span><a href="#dayof">Day-Of Questions</a></span> | 
+		<span><a href="#notsure">We Weren't Sure How to Ask</a></span>
+	</div>
+	<br><br>
+
+	<div class="banner" id="rsvp">
+		RSVP Questions
+	</div>
+	<div class="question">
+		<div><strong>Q: What date should I RSVP by?</strong></div>
+		<div class="answer">A: RSVP at your earliest convienance, no later than August 18, 2024.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: What if I need to change my RSVP status after I submitted it?</strong></div>
+		<div class="answer">A: Directly text/call Dylan or Tyler.</div>
+	</div>
+<!-- 	<div class="question"><strong>Q: Who do we contact if something comes up the day of?</strong>
+		<div class="answer">ummmmmmmmmmm</div>
+	</div> -->
+
+	<div class="question">
+		<div><strong>Q: Can I bring additional guests/family members?</strong></div>
+		<div class="answer">A: Due to the space constraints of our venue, we need to limit the number of attendees at our wedding. We are only planning for the people on your invitation, which includes a guest when indicated, to be in attendance based on your RSVP. Please do not plan to bring additional guests (including children). Please contact Dylan or Tyler with any special circumstances or questions.</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="banner" id="planning">
+		Planning Questions
+	</div>
+	<div class="question">
+		<div><strong>Q: Where should I stay? Is there a hotel room block?</strong></div>
+		<div class="answer">A: Yes, we have room blocks for our guests at multiple hotels. Please see the <a href="travel.html#stay">travel page</a> for more information.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Are there other events during the weekend we should be attending?</strong></div>
+		<div class="answer">A: We are hosting a welcome dinner for those guests who are travelling to southern California for our wedding.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Do you have suggestions for places to eat, drink, and see while I am in town?</strong></div>
+		<div class="answer">A: Yes, please see the <a href="travel.html#todo">travel page</a>.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: What should I wear?</strong></div>
+		<div class="answer">A: Semi-formal attire. Jackets, suits, dresses, ties. Pointy high-heels not recommended as the floor is not even in all parts of our venue.
+		</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: What does semi-formal mean?</strong></div>
+		<div class="answer">A: Semi-formal, sometimes called cocktail attire, is nicer clothing for special occasions but not as formal as tuxedos, etc. You can use this reference as a guide. <br><a href="static/images/attire_guide.png" target="_blank"><img style="max-width: 80%" src="static/images/attire_guide.png"></a>
+		</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Are there any colors you'd prefer me to wear?</strong></div>
+		<div class="answer">A: Wear whatever colors you'd like.
+		</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: What will the weather be?</strong></div>
+		<div class="answer">A: Last year at this time the temperatures ranged from the high to low 70's. Our venue is all outdoors, there are heat lamps and permanent clear tents to protect us should we encounter any rain. Wearing layers is always recommended.</div>
+	</div>
+
+
+
+	<div class="banner" id="venue">
+		Venue Questions
+	</div>
+	<div class="question">
+		<div><strong>Q: Is there parking at your venue?</strong></div>
+		<div class="answer">A: Yes, but as it is quite limited. We will be covering the required valet costs. Please consider taking the shuttle we will also be providing.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: How do I get there?</strong></div>
+		<div class="answer">A: See <a href="travel.html#getting_there">travel page</a> for both driving instructions and shuttle options.</div>
+	</div>
+
+	<div class="question">
+		<div><strong>Q: Is your venue indoors or outdoors?</strong></div>
+		<div class="answer">A: Our venue is almost exclusively outside.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Is there cell service? What about Wi-Fi?</strong></div>
+		<div class="answer">A: Cell service is limited in the canyon depending on your provider. The venue does not offer Wi-Fi. We encourage you to take advantage of this evening to disconnect and enjoy a once in a lifetime event.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Does your venue accomodate people with limited accessibility?</strong></div>
+		<div class="answer">A: Yes, there are paths that should require guests to use any stairs. Additionally, if you are staying in one of our hotels, please contact them as soon as possible <em>after</em> booking to request a room with any necessary accomodations you may need.</div>
+	</div>
+
+	<div class="banner" id="dayof">
+		Day-Of Questions
+	</div>
+	<div class="question">
+		<div><strong>Q: Can we bring a wedding gift/card to the ceremony/reception?</strong></div>
+		<div class="answer">A: We will have a card collection station at our venue. We would prefer you not bring any wrapped gifts to the venue as it creates a logistical challenge getting them all home. If you'd like to send us a wedding gift, we'd suggest you use the  <a href="registry.html">registry links</a> above.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Will there be a time gap between your wedding ceremony and the reception?</strong></div>
+		<div class="answer">A: No, immediately after our ceremony, we will be hosting a cocktail hour followed by dinner.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Will there be an open bar?</strong></div>
+		<div class="answer">A: No, you'll have your choice of unlimited wine, beer, or two signature cocktails.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Will there be meal options for guests with dietary restrictions or allergies?</strong></div>
+		<div class="answer">A: Please note all food restrictions or allergies on your RSVP.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: What time will the reception end?</strong></div>
+		<div class="answer">A: Exact time is to be determined, approximately 10:30 PM.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Will there be an after-party?</strong></div>
+		<div class="answer">A: Yes! Head to the lobby of the Courtyard Marriott in Woodland Hills.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Can I take photos?</strong></div>
+		<div class="answer">A: Yes, feel free to take photos. However we have hired a professoinal photographer. Please be mindful to not get in her way. </div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Can we post photos on social media? Does your have a wedding hashtag?</strong></div>
+		<div class="answer">A: You are welcome to share photos on social media, tag us, or use the hashtag <strong>#DylanTylerWedding</strong>. We'd love to see any pictures you capture from the weekend (whether you plan to share on social media or not) please add any photos to our <a href="https://photos.app.goo.gl/N4ybDrzTnBAukJ1K9" target="_blank">google photo album here</a>.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: I can't attend. Will there be a virtual celebration option?</strong></div>
+		<div class="answer">A: No, we hope to have lots of photos to share though!</div>
+	</div>
+
+
+
+	<div class="banner" id="notsure">
+		We Weren't Sure How to Ask
+	</div>
+	<div class="question">
+		<div><strong>Q: Who is changing their last name?</strong></div>
+		<div class="answer">A: Neither of us.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Whose name goes first if we formally are addressing the both of you?</strong></div>
+		<div class="answer">A: Either of us.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Is it a marriage or a civil union?</strong></div>
+		<div class="answer">A: It's a marriage. We are getting married at our wedding.</div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Is your marriage legal everywhere in the U.S.?</strong></div>
+		<div class="answer">A: It is now legally recognized by our local, state, and federal governments. Learn more about the <a href="marriage_equality.html">road to marriage equality here.</a> </div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Who proposed to whom?</strong></div>
+		<div class="answer">A: Dylan proposed to Tyler during our trip to Tokyo. Read more about <a href="our_story.html">our story and our proposal here.</a> </div>
+	</div>
+	<div class="question">
+		<div><strong>Q: Since there is no bride can we wear white?</strong></div>
+		<div class="answer">A: Sure, We would still recommend avoiding wearing something that may make you look like the bride.</a> </div>
+	</div>
+	<div class="question">
+		<div><strong>Q: On your registry, does Honeyfund take a cut of the money we contributed to your honeymoon?</strong></div>
+		<div class="answer">A: No, Honefund does not take a cut.</a> </div>
+	</div>
+	</div>
+	<div class="public-only center-text" style="padding: 2em; text-align: center;">
+		<strong> Q: Why can I not see any of the FAQ's?</strong><br>
+		A: You need to first go to the <a href="index.html">homepage</a> and look up your invitation, then you can return to view more information on all pages.
+	</div>
+</div>
+
+
+    </div>
+
+    
+        <div id="footer" style="font-family: sans-serif;font-size: small; display: flex; align-items: center; justify-content: center; margin: 2em">
+            <span style="color: #A5A5A5">Copyright &copy; <script>document.write(new Date().getFullYear())</script></span>&nbsp;
+            <span style="color: #4EAD5B">Dylan</span>
+            <span style="color: #A0CE63">And</span>
+            <span style="color: #4FAEEA">Tyler</span>
+            <span style="color: #A5A5A5">.com</span>
+        </div>
+    
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="static/js/auth.js?v=3"></script>
+</body>
+</html>

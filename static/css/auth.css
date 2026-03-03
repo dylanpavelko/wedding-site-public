@@ -1,0 +1,36 @@
+/* Secure by Default: Hide sensitive content immediately */
+.secured-content {
+    display: none !important;
+}
+
+/* Public content is shown by default */
+.public-only {
+}
+
+/* When Logged In: Show secured, hide public */
+body.logged-in .secured-content {
+    display: block !important;
+}
+
+body.logged-in .public-only {
+    display: none !important;
+}
+
+/* Specific Home Page Overrides */
+/* Ensure these specific IDs behave as expected if classes are missing or for specificity */
+
+/* Logged in users shouldn't see login forms */
+body.logged-in #homepage_messages, 
+body.logged-in #login_form {
+    display: none !important;
+}
+
+/* Logged in users see highlights (redundant if class is applied, but good safety) */
+body.logged-in #additional_highlights {
+    display: block !important;
+}
+
+/* Also show logout button when logged in */
+body.logged-in #nav-logout {
+    display: block !important;
+}

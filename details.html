@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Details - Dylan & Tyler's Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="mask-icon" type="image/png" href="static/images/td_icon.svg" />
+    <link rel="stylesheet" href="static/css/auth.css?v=2">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<style>
+
+	body, html {
+	  height: 100%;
+	}
+
+	#content {
+		height: 100%;
+	}
+
+	div {
+		position: relative;
+	}
+	.parallax {
+	  /* The image used */
+	  
+
+	  /* Full height */
+	  height: 80%; 
+
+	  /* Create the parallax scrolling effect */
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+
+	.bgimg-1 {
+	  background-image: url("static/images/spring.jpg");
+	  width: 100%;
+	  min-height: 80vh;
+	}
+
+	.bgimg-2 {
+	  background-image: url("static/images/redwoodEdit.jpg");
+	  min-height: 400px;
+	  width: 100%;
+	}
+
+	.bgimg-3 {
+	  background-image: url("static/images/japanEdit.jpg");
+	  min-height: 600px;
+	  width: 100%;
+	}
+
+
+	/* Create two equal columns that floats next to each other */
+.column {
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  margin-top: 0px;
+  vertical-align: text-top;
+  transition: opacity 300ms, transform 300ms;
+  font-size: large;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  justify-content: center;
+  vertical-align: text-top;
+  margin: 2em;
+}
+
+	.left {
+		text-align: right;
+		padding-right: 50px;
+		width: 25%;
+
+	}
+
+	.right {
+		text-align: left;
+		padding-top: 70px;
+
+	}
+
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  	.bgimg-1 {
+  		background-attachment:scroll;
+  	}
+
+  	.bgimg-2 {
+  		background-attachment:scroll;
+  	}
+
+  	.bgimg-3 {
+  		background-attachment:scroll;
+  	}
+}
+
+@media screen and (max-width: 1000px) {
+	.column {
+	  width: 100%;
+	}
+
+	.left{
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	.right{
+		padding-top: 10px;
+	}
+
+}
+
+</style>
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          min-width: 980px
+          width: 100%;
+        }
+
+        nav
+        {
+           position: fixed;
+           top: 0px;
+           background-color: white;
+           width: 100%;
+           z-index: 2;
+        }
+
+        .topnav {
+          overflow: hidden;
+          /*background-color: #333;*/
+          margin: 1em;
+        }
+
+        #content{
+            padding-top: 4em;
+            width: 100%;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #606060;
+          text-align: center;
+          padding: 14px 16px;
+          /*text-decoration: none;*/
+          font-size: 17px;
+          margin-right: 2em;
+        }
+
+
+        .topnav a.homepage{
+            color: #FFEECC;
+            margin-right: unset;
+        }
+
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+        }
+
+        .topnav a.homepage:hover{
+            color: white;
+        }
+
+        .topnav a.active {
+          color: black;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+
+
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+          .topnav a.homepage {
+            float: unset;
+          }
+        }
+
+
+        /* Underline styles */
+        .topnav a {
+          display: block;
+          position: relative;
+          padding: 0.2em 0;
+          text-decoration: none;
+        }
+
+        /* Fade in */
+        .topnav a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: grey;
+          /*background: linear-gradient(to right, #4FAEEA, #4EAD5B, #4FAEEA);*/
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .topnav a.homepage::after {
+            background-color: rgba(238,180,28,1);
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        .topnav a::after {
+          opacity 1;
+          transform: scale(0);
+          transform-origin: center;
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after{
+          transform: scale(1);
+        }
+
+        .rcorners{
+            border-radius: 25px;
+        }
+
+        .card{
+            /*border: 3px solid lightblue;*/
+            padding: 15px;
+            list-style-type: none;
+            margin: 1em;
+/*            width: 430px;*/
+
+        }
+
+        #nav-logout {
+            display: none;
+        }
+
+        body.logged-in #nav-logout {
+            display: block;
+        }
+
+        @media screen and (max-width: 1000px) {
+             body.logged-in #nav-logout {
+                 display: none;
+             }
+             .topnav.responsive #nav-logout.active {
+                 display: block;
+             }
+             
+             /* Responsive rule ensures it appears when menu is open */
+             .topnav.responsive #nav-logout {
+                  display: block;
+                  float: none;
+                  text-align: left;
+             }
+        }
+    </style>
+    
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP722B0P6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NP722B0P6Z');
+</script>
+
+<body>
+    <nav>
+        
+            <div class="topnav" id="myTopnav">
+                <a  href="index.html">
+                    <span style="color: #4EAD5B">Dylan</span><span style="color: #A0CE63">And</span><span style="color: #4FAEEA">Tyler</span><span style="color: #A5A5A5">.com</span>
+                </a>
+                <a  class="active"  href="details.html">Details</a> <!-- Countdown, Location, Schedule -->
+                <a  href="rsvp.html">RSVP</a>
+                <a  href="registry.html">Registry</a>
+                <a  href="our_story.html">Our Story</a>
+                <!-- <a>Wedding Party</a> -->
+                <a  href="travel.html">Travel</a> 
+                <a  href="faq.html">FAQ's</a>
+                <a  href="marriage_equality.html">🏳️‍🌈 Marriage Equality</a>
+                <a id="nav-logout" style="float: right; cursor: pointer; display: none;">Logout</a>
+                <!--<a>Land Acknowledgement</a>-->
+                <!-- 
+                <a>After Event</a>
+                <a>Photos</a>
+                <a>> Professional</a>
+                <a>> Photobooth</a>
+                <a>> Social </a> -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
+        
+    </nav>
+    <div id="content" name="content">
+	
+
+<div class="secured-content">
+		<div class="parallax bgimg-1"></div>
+
+		<div style="min-height: 25%; font-size: x-large; text-align: center;padding: 1.5em;">
+			<h2>We are getting married!</h2><h4>(<span id="demo">We&#x27;re Married!</span>!)</h4>
+			<h4 style="max-width: 800px; margin-left: auto; margin-right: auto">And we want to make sure you have all of the details to celebrate with us. This page should have all the essential details about the wedding itself. Please use the additional pages on this site to find details about travel logistics, frequently asked questions, etc.</h4>
+		</div>
+
+		<div class="parallax bgimg-2"></div>
+
+		<!-- Display the countdown timer in an element -->
+		
+
+		<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Oct 5, 2024 16:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		  // Get today's date and time
+		  var now = new Date().getTime();
+
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		  // Display the result in the element with id="demo"
+		  document.getElementById("demo").innerHTML = "in " + days + " days, " + hours + " hours, "
+		  + minutes + " minutes, and " + seconds + " seconds";
+
+		  // If the count down is finished, write some text
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("demo").innerHTML = "Party Time!!";
+		  }
+		}, 1000);
+		</script>
+	
+	<div style="padding:2em">
+		
+		
+		
+
+		<div class="grid">
+			<div class="row">
+				<div class="column left">
+					<h2>WHEN</h2>
+				</div>
+				<div class="column right">
+					Our Wedding will take place on
+					<strong><span id="wedding-date">Loading...</span></strong>.<br>
+					 Please arrive at <strong><span id="wedding-time">Loading...</span></strong> for the wedding ceremony, reception immediately to follow.<br><br>
+					 Please RSVP by <span id="rsvp-deadline">Loading...</span>.
+				</div>
+			</div>
+			<div class="row">
+				<div class="column left">
+					<h2>WHERE</h2>
+				</div>
+				<div class="column right">
+					 <div style="text-align: center; font-size: large;">
+						<img src="static/images/innLogo.png" width="300" alt="Inn of the Seventh Ray"> 
+					</div><br>
+					<div style="text-align: center; font-size: large;"><a id="venue-link" href="#" target="_blank"><span id="venue-address">Loading Address...</span></a></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column left">
+					<h2>HOW<br>(to get there)</h2>
+				</div>
+				<div class="column right">
+					 <span id="transport-desc">Loading...</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column left">
+					<h2>WHAT<br>(to wear)</h2>
+				</div>
+				<div class="column right">
+					 <span id="attire-desc">Loading...</span>
+				</div>
+			</div>
+			<div id="welcome-dinner-row" class="row" style="display:none">
+				<div class="column left">
+					<h2>Welcome Dinner<br></h2>
+				</div>
+				<div class="column right">
+					 <p>Join us at <span id="welcome-time">Loading...</span> on <span id="welcome-date">Loading...</span> at <span id="welcome-location">Loading...</span> for a Welcome Dinner.</p>
+					 <p>The location is at <a id="welcome-link" href="#" target="_blank"><span id="welcome-address">Loading Address...</span></a>. <span id="welcome-desc">Loading...</span></p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="parallax bgimg-3"></div>
+	<div id="footer" style="font-family: sans-serif;font-size: small; display: flex; align-items: center; justify-content: center;">
+	    <span style="color: #A5A5A5">Copyright &copy; <script>document.write(new Date().getFullYear())</script></span>&nbsp;
+	    <span style="color: #4EAD5B">Dylan</span>
+	    <span style="color: #A0CE63">An</span>
+	    <span style="color: #78C7C6">d</span>
+	    <span style="color: #4FAEEA">Tyler</span>
+	    <span style="color: #A5A5A5">.com</span>
+	</div>
+</div>
+<div class="public-only" style="text-align: center; width: 100%; padding: 2em;">
+	<div>
+		Please access your invitation from the <a href="index.html">homepage</a> before accessing our wedding details. 
+	</div>
+</div>
+
+
+<script>
+	// This script runs after auth.js because we use window.onload to ensure everything is ready
+	window.addEventListener('load', async function() {
+		console.log("Details page loaded. Checking for invite data...");
+		// Helper to show errors on screen
+		const showError = (msg) => {
+			const container = document.querySelector('.secured-content');
+			if(container) {
+				const errDiv = document.createElement('div');
+				errDiv.style.color = 'red';
+				errDiv.style.padding = '1em';
+				errDiv.style.background = 'rgba(0,0,0,0.8)';
+				errDiv.innerText = "Debug Error: " + msg;
+				container.prepend(errDiv);
+			}
+			console.error(msg);
+		};
+
+		if (typeof getInviteData === 'function') {
+			try {
+				const data = await getInviteData();
+				
+				if (data && data.site_config) {
+					// ... (success code)
+					const c = data.site_config;
+					
+					// Helper to safely set text
+					const setText = (id, text) => {
+						const el = document.getElementById(id);
+						if(el) el.innerText = text;
+						else console.warn(`Element #${id} not found`);
+					};
+					
+					// Helper to safely set HTML (for descriptions with <br>)
+					const setHTML = (id, html) => {
+						const el = document.getElementById(id);
+						if(el) el.innerHTML = html;
+						else console.warn(`Element #${id} not found`);
+					};
+
+					setText('wedding-date', c.wedding_date);
+					setText('wedding-time', c.wedding_time);
+					setText('rsvp-deadline', c.rsvp_deadline);
+					
+					setText('venue-address', c.venue_address);
+					const vLink = document.getElementById('venue-link');
+					if(vLink && c.venue_map_url) vLink.href = c.venue_map_url;
+					
+					setHTML('transport-desc', c.transportation_description);
+					setHTML('attire-desc', c.attire_description);
+					
+					// Welcome Dinner (Optional)
+					if (c.welcome_dinner) {
+						setText('welcome-date', c.welcome_dinner.date);
+						setText('welcome-time', c.welcome_dinner.time);
+						setText('welcome-location', c.welcome_dinner.location);
+						setText('welcome-address', c.welcome_dinner.address);
+						const wLink = document.getElementById('welcome-link');
+						if(wLink && c.welcome_dinner.map_url) wLink.href = c.welcome_dinner.map_url;
+						setHTML('welcome-desc', c.welcome_dinner.description);
+						
+						// Show the section
+						const wRow = document.getElementById('welcome-dinner-row');
+						if(wRow) wRow.style.display = 'block';
+					}
+				} else {
+					if(!data) {
+                        showError("No data received from encryptor.");
+                    } else {
+                        const keys = Object.keys(data).join(', ');
+                        const preview = JSON.stringify(data).substring(0, 100);
+                        showError(`Data received but site_config is missing. Keys: [${keys}]. Preview: ${preview}`);
+                    }
+				}
+			} catch(e) {
+				showError("Exception loading details: " + e.message);
+			}
+		} else {
+			showError("getInviteData function not found! Auth script missing?");
+		}
+	});
+</script>
+
+    </div>
+
+    
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="static/js/auth.js?v=3"></script>
+</body>
+</html>

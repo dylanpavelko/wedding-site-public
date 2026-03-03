@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Marriage Equality - Dylan & Tyler's Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon/favicon.ico"/>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="mask-icon" type="image/png" href="static/images/td_icon.svg" />
+    <link rel="stylesheet" href="static/css/auth.css?v=2">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+
+<style type="text/css">
+
+	body {
+		margin: 0;
+	}
+	.yellow{
+		background-color: yellow;
+	}
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	/* Set a background color */
+	.timeline-container {
+		background: repeating-linear-gradient(
+		    135deg,
+		    #E50000,
+		    #E50000 60px,
+		    #FF8D00 60px,
+		    #FF8D00 120px,
+		    #FFEE00 120px,
+		    #FFEE00 180px,
+		    #028121 180px,
+		    #028121 240px,
+		    #004CFF 240px,
+		    #004CFF 300px,
+		    #760088 300px,
+		    #760088 360px
+		  );
+	  font-family: Helvetica, sans-serif;
+	  width: 100%;
+	  height: 100%;
+	  z-index: -1;
+	  position: absolute;
+	  padding-bottom: 500em;
+	  margin-bottom: -500em;
+		  filter: grayscale(100%);
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 6px;
+	  background-color: white;
+	  top: 0;
+	  bottom: 0;
+	  left: 50%;
+	  margin-left: -3px;
+	}
+
+	/* Container around content */
+	.container {
+	  padding: 10px 40px;
+	  position: relative;
+	  background-color: inherit;
+	  width: 50%;
+	}
+
+	/* The circles on the timeline */
+	.container::after {
+	  content: '';
+	  position: absolute;
+	  width: 25px;
+	  height: 25px;
+	  right: -13px;
+	  background-color: white;
+	  border: 4px solid #FF9F55;
+	  top: 15px;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
+
+	/* Place the container to the left */
+	.left {
+	  left: 0;
+	}
+
+	/* Place the container to the right */
+	.right {
+	  left: 50%;
+	}
+
+	/* Add arrows to the left container (pointing right) */
+	.left::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: 1;
+	  right: 30px;
+	  border: medium solid white;
+	  border-width: 10px 0 10px 10px;
+	  border-color: transparent transparent transparent white;
+	}
+
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: 1;
+	  left: 30px;
+	  border: medium solid white;
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent white transparent transparent;
+	}
+
+	/* Fix the circle for containers on the right side */
+	.right::after {
+	  left: -13px;
+	}
+
+	/* The actual content */
+	.content {
+	  padding: 20px 30px;
+	  background-color: white;
+	  position: relative;
+	  border-radius: 6px;
+	}
+
+	/* Media queries - Responsive timeline on screens less than 600px wide */
+	@media screen and (max-width: 600px) {
+	/* Place the timelime to the left */
+	  .timeline::after {
+	    left: 31px;
+	  }
+
+	/* Full-width containers */
+	  .container {
+	    width: 100%;
+	    padding-left: 70px;
+	    padding-right: 25px;
+	  }
+
+	/* Make sure that all arrows are pointing leftwards */
+	  .container::before {
+	    left: 60px;
+	    border: medium solid white;
+	    border-width: 10px 10px 10px 0;
+	    border-color: transparent white transparent transparent;
+	  }
+
+	/* Make sure all circles are at the same spot */
+	  .left::after, .right::after {
+	    left: 17px;
+	  }
+
+	/* Make all right containers behave like the left ones */
+	  .right {
+	    left: 0%;
+	  }
+	}
+
+	img {
+	  width: 80%;
+	  object-fit: contain;
+	}
+
+	.center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.timeline-header{
+		text-align: center;
+		font-family: sans-serif;
+		background-color: #FF9F55;
+		margin: 0;
+		padding: 1em;
+		color: white;
+	}
+	.intro{
+		margin: 2em;
+	}
+
+</style>
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+
+	    const maxHeight = document.body.scrollHeight - window.innerHeight;
+	    document.querySelector('.timeline-container').style.paddingBottom = document.querySelector('.timeline').scrollHeight + "px";
+	  	document.querySelector('.timeline-container').style.marginBottom = -document.querySelector('.timeline').scrollHeight + "px";
+	    // console.log(window.pageYOffset);
+
+	    $color_spot1 = document.querySelector('#color1').getBoundingClientRect().top
+	    $color_spot2 = document.querySelector('#color1').getBoundingClientRect().top
+
+	    if(window.pageYOffset > $color_spot2){
+	    	$background_rainbow = document.querySelector('.timeline-container');
+	    	$grayscale_value = 100 - ((window.pageYOffset - $color_spot2) / (maxHeight - $color_spot2)) * 80
+
+			$background_rainbow.style.filter = "grayscale("+$grayscale_value+"%)";
+	    }else if(window.pageYOffset > $color_spot1){
+	    	console.log("Color 1 hit");
+	    	$background_rainbow = document.querySelector('.timeline-container');
+	    	$grayscale_value = 100 - ((window.pageYOffset - $color_spot1) / (maxHeight - $color_spot1)) * 20
+
+			$background_rainbow.style.filter = "grayscale("+$grayscale_value+"%)";
+	    }else{
+	    	$background_rainbow = document.querySelector('.timeline-container');
+	    	$background_rainbow.style.filter = "grayscale("+100+"%)";
+	    }
+	});
+</script>
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          min-width: 980px
+          width: 100%;
+        }
+
+        nav
+        {
+           position: fixed;
+           top: 0px;
+           background-color: white;
+           width: 100%;
+           z-index: 2;
+        }
+
+        .topnav {
+          overflow: hidden;
+          /*background-color: #333;*/
+          margin: 1em;
+        }
+
+        #content{
+            padding-top: 4em;
+            width: 100%;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #606060;
+          text-align: center;
+          padding: 14px 16px;
+          /*text-decoration: none;*/
+          font-size: 17px;
+          margin-right: 2em;
+        }
+
+
+        .topnav a.homepage{
+            color: #FFEECC;
+            margin-right: unset;
+        }
+
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+        }
+
+        .topnav a.homepage:hover{
+            color: white;
+        }
+
+        .topnav a.active {
+          color: black;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+
+
+        }
+
+        @media screen and (max-width: 1000px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+          .topnav a.homepage {
+            float: unset;
+          }
+        }
+
+
+        /* Underline styles */
+        .topnav a {
+          display: block;
+          position: relative;
+          padding: 0.2em 0;
+          text-decoration: none;
+        }
+
+        /* Fade in */
+        .topnav a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: grey;
+          /*background: linear-gradient(to right, #4FAEEA, #4EAD5B, #4FAEEA);*/
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .topnav a.homepage::after {
+            background-color: rgba(238,180,28,1);
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        .topnav a::after {
+          opacity 1;
+          transform: scale(0);
+          transform-origin: center;
+        }
+
+        .topnav a:hover::after,
+        .topnav a:focus::after{
+          transform: scale(1);
+        }
+
+        .rcorners{
+            border-radius: 25px;
+        }
+
+        .card{
+            /*border: 3px solid lightblue;*/
+            padding: 15px;
+            list-style-type: none;
+            margin: 1em;
+/*            width: 430px;*/
+
+        }
+
+        #nav-logout {
+            display: none;
+        }
+
+        body.logged-in #nav-logout {
+            display: block;
+        }
+
+        @media screen and (max-width: 1000px) {
+             body.logged-in #nav-logout {
+                 display: none;
+             }
+             .topnav.responsive #nav-logout.active {
+                 display: block;
+             }
+             
+             /* Responsive rule ensures it appears when menu is open */
+             .topnav.responsive #nav-logout {
+                  display: block;
+                  float: none;
+                  text-align: left;
+             }
+        }
+    </style>
+    
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP722B0P6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NP722B0P6Z');
+</script>
+
+<body>
+    <nav>
+        
+            <div class="topnav" id="myTopnav">
+                <a  href="index.html">
+                    <span style="color: #4EAD5B">Dylan</span><span style="color: #A0CE63">And</span><span style="color: #4FAEEA">Tyler</span><span style="color: #A5A5A5">.com</span>
+                </a>
+                <a  href="details.html">Details</a> <!-- Countdown, Location, Schedule -->
+                <a  href="rsvp.html">RSVP</a>
+                <a  href="registry.html">Registry</a>
+                <a  href="our_story.html">Our Story</a>
+                <!-- <a>Wedding Party</a> -->
+                <a  href="travel.html">Travel</a> 
+                <a  href="faq.html">FAQ's</a>
+                <a  class="active"  href="marriage_equality.html">🏳️‍🌈 Marriage Equality</a>
+                <a id="nav-logout" style="float: right; cursor: pointer; display: none;">Logout</a>
+                <!--<a>Land Acknowledgement</a>-->
+                <!-- 
+                <a>After Event</a>
+                <a>Photos</a>
+                <a>> Professional</a>
+                <a>> Photobooth</a>
+                <a>> Social </a> -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
+        
+    </nav>
+    <div id="content" name="content">
+	
+<div>
+		<div class="intro w3-row">
+			<div class="w3-twothird w3-container">
+				<h3>When the personal <em>is</em> political</h3>
+				<p>
+					We sincerely wish that there was nothing political about our relationship and our wedding. But by us being two men, our marriage carries inherent political connotations. We grew up in a society that not only didn't recognize the marriage of same-sex couples merely as a matter of status quo but actively worked to pass legislation (via elected officials and general population ballot measures) to deny the right for gay and lesbian couples to marry.
+				</p>
+				<p>
+					The recognition of being a "spouse" not only carries societal significance, but also bestows legal and financial privileges such as the ability to file your taxes jointly, the ability to sponsor a spouse's green card, the ability to ensure in old-age you aren't split up in different long-term care facilities by Medicare, amongst many others. In fact, until 2015, these rights and privileges were denied to same-sex couples whether they were in a legal civil union or even legally married in a state that recognized same-sex marriages, due to federal legislation passed in 1996.
+				</p>
+				<p>
+					As a Californian, the sad reality is that despite living in what is considered a progressive state, at no point in the lengthy legal process to allow same-sex marriage were our rights progressed by the communities in which we live. <a href="#timeline">In the timeline below</a> you will see that repeatedly the only path to equal rights was in the judiciary branch of our governments. The courts recognized that using gender to deny an individual the right to marry the person of their choice denies that person their fundamental right of liberty. That the religious beliefs of even a majority of the population should not infringe on the rights of a minority.
+				</p>
+				<p>
+					This year, there is a new ballot proposition (<a href="https://ballotpedia.org/California_Proposition_3,_Right_to_Marry_and_Repeal_Proposition_8_Amendment_(2024)" target="_blank">Prop 3</a>) that gives Californian voters the opportunity to formally remove the language in our State Constitution added by Proposition 8 in 2008 that defined marriage as being between "a man and a woman." Prop 8 was found to be unconsitutional by the US Supreme Court and is no longer in effect, but the language still exists. Passing Prop 3 would protect the right to marry for all individuals in California should the US Supreme Court ever overturn their precedant and return the matter of marriage equality to be a state's rights matter. We obviously are big fans and hope you join us in voting "Yes" on Prop 3 this November.
+				</p>
+				<p>We feel so lucky to have found each other and fallen in love in a time in which we are able to have our relationship be recognized in this profound and meaningful way by our friends, our family, and our <a id="timeline">government.</a></p>
+			</div>
+			<div class="w3-third w3-container"><img src="static/images/pride.jpg" style="width: 80%; margin-top: 4em;" alt="Tyler and Dylan at Pride Event" title="Tyler and Dylan at Pride Event"></div>
+		</div>
+		<div>
+			<h3 class="timeline-header">The Road to Marriage Equality</h3>
+		</div>
+		 <div class="timeline-container">
+		 </div>
+		 <div class="timeline">
+		 <div class="container right">
+		    <div class="content">
+		      <h2>October 10, 1972</h2>
+		      <p>The start of the legal battle for marriage equality in the United States began at University of Minnesota's Minneapolis campus when James Michael McConnel, a librarian, and Richard John Baker, a law student, applied for a marriage license and were denied by the Clerk of District Court Gerald Nelson on the basis that they were both men. Baker sued Nelson insisting that the license was not forbidden (using the legal maxim 'everything that is not forbidden is permitted'). <br><br>
+		      <img src="static/images/marriage_equality/Baker_McConnell.jpg" title="Baker and McConnel (r) at their Minneapolis home, 1970" alt="Baker and McConnel (r) at their Minneapolis home, 1970" class="center">
+
+		      <!-- MODERN DAY https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F90fb41e8-cf55-11eb-8afd-f729c1c2ffd0.jpg?crop=2667%2C1500%2C0%2C0 -->
+		      <br>
+		      The case was heard by the Minnesota Supreme Court (<a href="https://en.wikipedia.org/wiki/Baker_v._Nelson" target="_blank"><em>Baker v. Nelson</em></a>) who ruled against the couple stating that, "...construcing a marriage statute to restrict marriage to persons of the opposite sex 'does not offend' the U.S. Constitution." Baker appealed to the U.S. Supreme Court arguing that if the court were to interpret the statues to require marriage to be between people of the opposite-sex couples it would violate the people's fundamental right to marry under the Due Process Clause of the Fourteenth Amendment. It would also discriminate based on gender, contrary to the Equal Protection Clause of the Fourteenth Amendment; and deprive the people of privacy rights flowing from the Ninth Amendment.<br><br>
+		  	  The U.S. Supreme Court dismissed hearing the case with the single sentence stating, "The appeal is dismissed for want of substantial federal question." <span class="yellow">The U.S. Supreme Courts' dismissal of hearing the case was considered to be a decision on the merits of the case and became a binding precedent. This forced the lower courts to rule in the same manner as the U.S. Supreme Court when presented with the exact same issue.</span> This effectively prevented any legal challenges to same-sex marriage for the next twenty years.</p>
+		    </div>
+		 </div>
+		 <div class="container left">
+		    <div class="content">
+		      <h2>1980's</h2>
+		      <p>In a time where being gay meant living in secret or living as an outcast, gay marriage was hardly an agenda item. Few if any states had laws preventing discrimination on the basis of sexual orientation, yet at the same time the AIDS epidemic in the 1980's and 1990's raised questions around survivorship and inheritance benefits of same-sex couples.</p>
+		    </div>
+		  </div>
+		 <div class="container right">
+		    <div class="content">
+		      <h2>May 5, 1993</h2>
+		      <p>The Supreme Court of Hawaii rules in the <a href="https://en.wikipedia.org/wiki/Baehr_v._Miike" target="_blank"><em>Baehr v. Miike</em></a> court case that while Hawaii's constitution did not include a fundamental right to same-sex marriage, it did find that <span class="yellow">under the state's equal protection clause that denying marriage licenses to same-sex couples constituted discrimination based on sex</span> that required justification by the state. Within the state of Hawaii, this led to a commission to study the issue. While the commission ultimately recommended opening marriage to same-sex couples, the case was dismissed. It was dismissed since, prior to any further actions, voters of Hawaii passed an amendment explicitly reserving marriage for opposite-sex couples, thereby nullifying the court case.<br><br>
+		      	<img src="static/images/marriage_equality/Genora_Dancel.jpg" title="Geneora Dancel & Ninia Baehr" alt="Geneora Dancel & Ninia Baehr" class="center"><br>
+		      	
+		      	<!-- MODERN DAY https://i0.wp.com/qnotescarolinas.com/wp-content/uploads/2022/10/Ninia-Baehr-Genora-Dancel.jpg -->
+
+		      This ruling, while not resulting in any direct legislative changes, created the first real spark of hope for those in favor of same-sex marriage and stoked the fears of those who wanted to reserve marriage for opposite-sex couples.</p>
+		    </div>
+		  </div>
+		  <div class="container left">
+		    <div class="content">
+		      <h2>September 21, 1996</h2>
+		      <p>Despite finding the legislation "divisive and unnecessary," and in the midst of his own extramarital affair yet to be made public, President Clinton signs the veto-proof, majority-backed <a href='https://www.congress.gov/bill/104th-congress/house-bill/3396' target="_blank">Defense of Marriage Act (DOMA)</a> into law. <span class="yellow">This law defined marriage by the federal government as between one man and one woman and also allowed states to deny same-sex marriages granted under the laws of other states.</span> It effectively prevented marriages and the associated benefits to same-sex couples. <br><br>The new legislation was in direct response to the <a href="https://en.wikipedia.org/wiki/Baehr_v._Miike" target="_blank"><em>Baehr v. Miike</em></a> case which implied that if "marriage in Hawaii [were] to include homosexual couples, [this] could make such couples eligible for a whole range of federal rights and benefits." The House Judiciary Committee stated that DOMA was intended by Congress to "reflect and honor a collective moral judgment and to express moral disapproval of homosexuality" and "make explicit what has been understood under federal law for over 200 years."</p>
+		    </div>
+		  </div>
+		  <div class="container right">
+		    <div class="content">
+		      <h2>June 26, 2003</h2>
+		      <p>The U.S. <span class="yellow">Supreme Court rules that States cannot have laws with criminal punishments for consensual, adult non-procreative sexual activity</span> with the ruling from <a href="https://en.wikipedia.org/wiki/Lawrence_v._Texas" target="_blank"><em>Lawrence v. Texas</em></a> striking down laws in 14 states making same-sex sexual activity legal in every U.S. state and territory. <span class="yellow">This ruling was the first federal law permitting homosexuality.</span> It was an expansion of <a href="https://en.wikipedia.org/wiki/Eisenstadt_v._Baird" target="_blank"><em>Eisenstadt v. Baird</em></a> ruling, which was a 1972 case that established the right of unmarried people to possess contraception on the same basis as married couples and effectively legalized premarital sex.</p>
+		    </div>
+		  </div>
+		  <div class="container left">
+		    <div class="content">
+		      <h2>February 12, 2004</h2><span id="color1"></span>
+		      <p>Del Martin and Phyllis Lyon, after being a couple for 51 years, have the first legal same-sex marriage ceremony performed in the United States when the mayor of San Francsico, Gavin Newsom, ordered city hall to issue marriage licenses to same sex couples despite it being illegal to do so at both the state and federal level.<br><br>
+		      <img src="static/images/marriage_equality/Del_Martin_and_Phyllis_Lyon_kiss.jpg" class="center"><br>
+		      Marriage licenses were issued to over 4,000 same sex couples until March 11, 2004 when the Supreme Court of California ordered an immediate halt to gay marriages in San Francisco citing Newsom's lack of authority to bypass state law and ruled the marriages were void. This prompted a series of lawsuits that resulted in a California state ruling in favor of same-sex marriage in 2008.
+		      </p>
+		    </div>
+		  </div>
+   		  <div class="container right">
+		    <div class="content">
+		      <h2>February 25, 2004</h2>
+		      <p>President Bush in his State of the Union address announces his opposition to same-sex marriage, and the House introduces a constitutional amendment that would define marriage as between a man and a woman. <br><br>
+		      	<img src="static/images/marriage_equality/Bush_SOTU_2004.jpg" class="center" title="Former President George W. Bush at 2004 State of The Union Address" alt="Former President George W. Bush at 2004 State of The Union Address"><br>
+		      	<span class="yellow">Amendments to the constitution require a 2/3rd's majority vote and would prevent the court system from extending marriage rights to same-sex couples and require a subsequent 2/3rd's majority vote to change the amendment.</span> The Federal Marriage Amendment was drafted, and while it won a majority of votes, it fell short of the 2/3rds majority required to amend the constitution. Revised versions of the Federal Marriage Amendment would be reconsidered in subsequent years with the most recent version being considered in 2015.
+		      	<span id="color2"></span>
+		    </div>
+		  </div>
+ 		  <div class="container left">
+		    <div class="content">
+		      <h2>May 17, 2004</h2>
+		      <p>On November 18, 2003, Massachusetts becomes the first state to legalize same-sex marriage via the Massachusetts Supreme Judicial Court (SJC) ruling of <a href="https://en.wikipedia.org/wiki/Goodridge_v._Department_of_Public_Health" target="_blank"><em>Goodridge v. Department of Public Health</em></a> that posed the state’s ban on same-sex marriage was unconstitutional. The SJC provided a definition of marriage that would meet the State Constitution’s requirements, stating, “We construe civil marriage to mean the voluntary union of two persons as spouses, to the exclusion of all others...We declare that barring an individual from the protections, benefits, and obligations of civil marriage solely because that person would marry a person of the same sex violates the Massachusetts Constitution.” The court stayed its ruling for 180 days to allow the state legislature to “take such action as it may deem appropriate in light of this opinion.”<br><br>
+		      On February 4, 2004, the court rejected a state legislature proposal seeking to use civil unions as an alternative to marriage for same-sex couples. The court deemed the proposal unacceptable since the distinction between marriage for different-sex couples and civil unions for same-sex couples constituted unconstitutional discrimination, even if the rights and obligations attached to each were identical. It called the difference between the terms "a considered choice of language that reflects a demonstrable assigning of same-sex, largely homosexual, couples to second-class status." The state law allowing same-sex marriage went into effect May 17, 2004.
+		  	<br><br>
+		  	In response, on November 2, 2004, eleven states passed state constitutional amendments defining marriage between a man and a woman. By 2006 the number had grown to 21 states, and by 2009, 29 states had constitutional provisions restricting marriage, and an additional 12 had statues that did so.</p>
+		    </div>
+		  </div>
+		  <div class="container right">
+		    <div class="content">
+		      <h2>September 2005 & October 2007</h2>
+		      <p>California Governor Arnold Schwarzenegger twice vetoes legislation that would have made same-sex marriage legal in California.</p>
+		    </div>
+		  </div>
+		  <div class="container left">
+		    <div class="content">
+		      <h2>May 15, 2008 - November 2008</h2>
+		      <p>The <span class="yellow">Supreme Court of California issues a decision legalizing same-sex marriage in California</span> (<a href="https://en.wikipedia.org/wiki/In_re_Marriage_Cases" target="_blank"><em>In re Marriage Cases</em></a>), holding that California's existing opposite-sex definition of marriage violated the constitutional rights of same-sex couples. <br><br>
+		      This ruling prompted a ballot initiative, known as <a href="https://en.wikipedia.org/wiki/2008_California_Proposition_8" target="_blank">Prop 8</a>, by opponents to same-sex marriage which would amend the California State constitution to define marriage as between a man and a woman. <span class="yellow">Prop 8 was voted into California state law in November 2008 <em>ending</em> the licensing and recognition of same-sex marriages in California after only less than six months of it being legalized by the Supreme Court of California.</span></p>
+		    </div>
+		  </div>
+		  <div class="container right">
+		    <div class="content">
+		      <h2>February 23, 2011</h2>
+		      <p>President Obama declares the <a href="https://en.wikipedia.org/wiki/Defense_of_Marriage_Act" target="_blank">Defense of Marriage Act (DOMA)</a> unconstitutional and instructs the Justice Department to stop defending it in court.</p>
+		    </div>
+		  </div>
+		  <div class="container left">
+		    <div class="content">
+		      <h2>July 29, 2013</h2>
+		      <p>The resulting series of court cases emerging, known as <a href="https://en.wikipedia.org/wiki/Hollingsworth_v._Perry" target="_blank"><em>Hollingsworth v. Perry</em></a>, from the passage of Prop 8 in California was heard by Judge Vaughn Walker, who in 2010 <span class="yellow">ruled that the banning of same-sex marriage violated equal protection under the law granted by the Fourteenth Amendment.</span> After the State of California refused to continue to defend Prop 8, the official sponsors of the proposition intervened and appealed to the U.S. Supreme Court. In a somewhat confusing ruling in 2013, the U.S. Supreme Court ruled that the official sponsors did not have proper standing to appeal an adverse federal court ruling. As a result, Judge Walker's findings remain the controlling precedent, and Prop 8 is invalid. This meant that <span class="yellow">same-sex marriage was again legal in California based on the repeal of Prop 8 but had no legal consequence for other states or federal marriage recognition</span> and was not considered an opinion by the U.S. Supreme Court on same-sex marriage itself.<br><br>
+		      On the same day, the U.S. Supreme Court also issued a ruling on <a href="https://en.wikipedia.org/wiki/United_States_v._Windsor" target="_blank"><em>United States v. Windsor</em></a>. Edith Windsor had been legally married in New York to her wife Thea Spyer. Spyer died in 2009 leaving her estate to Windsor who was barred from claiming the federal estate tax exemption for surviving spouses based on the Defense of Marriage Act (DOMA). After hearing the case, <span class="yellow">the U.S. Supreme Court ruled that Section 3 of the Defense of Marriage Act violated the constitution as it was a "deprivation of the liberty of the person protected by the Fifth Amendment."</span> This ruling enabled same-sex marriages to be recognized federally with all the associated benefits. <br><br>
+		      Following this ruling, the Obama Administration ordered the following benefits for all same-sex marriages, which were not previously allowed, regardless if the couple resided in a state that recognized their union:
+		      <ul>
+		      	<li>Same-sex couples could file their federal income taxes jointly.</li>
+		      	<li>Death benefits are paid to survivors of same-sex marriage by the Social Security Administration.</li>
+		      	<li>The Department of Homeland Security treats same-sex spouses equally for the purpose of obtaining a green card.</li>
+		      	<li>Federal employees in same-sex marriages can apply for health, dental, life, long-term care, and retirement benefits.</li>
+		      	<li> Legally married same-sex seniors on Medicare are eligible for equal benefits and joint placement in nursing homes.</li>
+		      </ul>
+		      </p>
+		    </div>
+		  </div>
+		  <div class="container right">
+		    <div class="content">
+		      <h2>June 26, 2015</h2>
+		      <p>In a consolidation of six lower court lawsuits known as <a href='https://en.wikipedia.org/wiki/Obergefell_v._Hodges' target="_blank"><em>Obergefell v. Hodges</em></a>, James Obergefell, who was legally married in Maryland to his spouse, John Arthur, who was terminally ill with ALS, sued the Ohio Registrar for not allowing him to be listed as his surviving spouse on his death certificate.<br><br> 
+		      <img src="static/images/marriage_equality/Marriage_Rally.jpg" class="center"><br>
+		      The case was heard by the U.S. Supreme Court who issued a landmark 5-4 decision <span class="yellow"> that ruled the fundamental right to marry is guaranteed to same-sex couples by both the Due Process Clause and the Equal Protection Clause of the Fourteenth Amendment of the U.S. Constitution– granting same-sex couples in all 50 states the right to full, equal recognition under the law</span> (where as previously a same-sex marriage could be recognized federally but not by a given state).<br><br></p>
+		    </div>
+		  </div>
+  		  <div class="container left">
+		    <div class="content">
+		      <h2>June 24, 2022</h2>
+		      <p>The U.S. Supreme Court ruled in <a href="https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women%27s_Health_Organization" target="_blank"><em>Dobbs v. Jackson Women's Health Organization</em></a>, in a 6-3 vote, to overturn prior Supreme Court rulings of <a href="https://en.wikipedia.org/wiki/Roe_v._Wade" target="_blank"><em>Roe v. Wade</em></a> (1973 case) and <a href="https://en.wikipedia.org/wiki/Planned_Parenthood_v._Casey" target="_blank"><em>Planned Parenthood v. Casey</em></a> (1992 case preventing states from banning abortion prior to fetal viability). This returned the rights to individual states to regulate any aspect of abortion not protected by federal law.<br><br>
+		      While having obvious consequences for women's health, this <span class="yellow">precedent-breaking ruling also has significant implications for marriage equality. The original <em>Roe v. Wade</em> decision was ruled, in part, on the basis that a pregnant woman had a fundamental right to privacy under the Due Process Clause of the <a href="https://en.wikipedia.org/wiki/Fourteenth_Amendment_to_the_United_States_Constitution" target="_blank">Fourteenth Amendment to the U.S. Constitution</a></span>. In addition to <em>Roe v. Wade</em>, other notable cases where the U.S. Supreme Court used the same interpretation of the Fourteenth Amendment granting an individual a right to privacy included <a href="https://en.wikipedia.org/wiki/Griswold_v._Connecticut" target="_blank"><em>Griswold v. Connecticut</em></a> (1965 case protecting a married couple's right to contraception), <a href="https://en.wikipedia.org/wiki/Lawrence_v._Texas" target="_blank"><em>Lawrence v. Texas</em></a> (2003 case banning criminal punishments for consensual, adult non-procreative sexual activity), and <a href='https://en.wikipedia.org/wiki/Obergefell_v._Hodges' target="_blank"><em>Obergefell v. Hodges</em></a> (2015 case granting same-sex protections in all 50 states). <span class="yellow">With prior precedence around an individual’s right to privacy now in question, so too are the recently won marriage rights of same-sex couples.</span></p>
+		    </div>
+		  </div>
+  		  <div class="container right">
+		    <div class="content">
+		      <h2>December 13, 2022</h2>
+		      <p>In response to concerns about the power of the judiciary to overturn precedent, the U.S. Congress passed, and President Biden signed, the <a href="https://www.congress.gov/bill/117th-congress/house-bill/8404" target="_blank">Respect for Marriage Act</a> Legislative Action. This Act <span class="yellow">replaces the language defining marriage as 'between a man and a woman' and a <em>spouse</em> as 'a person of the opposite sex' (found to be unconstitutional by SCOTUS in <em>United States v. Windsor</em> in 2013, but technically still the law) with language that recognizes any marriage 'between <em>two individuals</em> that is valid under state law'.</span> The act also requires states to recognize marriages performed out-of-state and that the marraige cannot be denied on the basis of sex, race, ethnicity, or national origin. 
+		      </p>
+		      <p>(It is important to note that the Respect for Marriage Act also protects interracial marriages, which were made legal by similar precedence as Roe v. Wade, which has been overturned.)
+		      <img src="static/images/marriage_equality/House_Vote.jpg" class="center" title="U.S. House Vote showing passing of Marriage Equality" alt="U.S. House Vote showing passing of Marriage Equality"></p>
+		    </div>
+		  </div>
+  		  <div class="container left">
+		    <div class="content">
+		      <h2>What's left?</h2>
+		      <p>While the legal status of gay marriage in the United States seem to be settled, <a href="https://en.wikipedia.org/wiki/LGBT_rights_by_country_or_territory#LGBT-related_laws_by_country_or_territory" target="_blank">the same is not true across the world</a>. Laws around same-sex marriage outside of the United States range from being legal to being punishable by death.</p>
+		      <p>Even in places where same-sex couples can legally marry, like in teh U.S., there remain many communities who are still very intolerant to anyone identifying as LGBTQ+. In particular for young people who grow up in these communities but are also coming to terms with their own identity, this can create an isolating and depressing experience when they see no one around them they can look up to as a role model or count on as an ally. Fewer than 40% of LGBTQ+ young people found their home LGBTQ-affirming, 41% of LGBTQ+ young people seriously considered attempting suicide in the past year, and 56% of LGBTQ+ young people who wanted mental health care in the past year were not able to get it.</p>
+		      <p>We have been lucky in life to not only find love in each other but to be surrounded with love from our families and friends. We have also been lucky in life in a way that leaves us wanting for little. Instead of purchasing us a wedding gift, please consider making a donation to <a href="https://give.thetrevorproject.org/fundraiser/5060642" target="_blank">The Trevor Project</a> – you would have our sincere appreciation. The Trevor Project is a (<a href="https://www.charitynavigator.org/ein/954681287" target="_blank">Charity Navigator 100% 4-star</a>) 501(c)(3) tax-exempt non-profit that provides free, confidential, and secure 24/7 access to trained crisis counselors for LGBTQ+ young people who may be struggling with issues such as coming out, LGBTQ+ identity, depression, and suicide.
+		      	<a href="https://give.thetrevorproject.org/fundraiser/5060642" target="_blank"><img src="static/images/marriage_equality/Trevor_Project.jpg" class="center"></a>
+		      </p>
+		    </div>
+		  </div>
+		</div> 
+
+		<div style="margin: 2em; color: #555">
+			Sources:
+			<ul>
+				<li>
+					<a href="https://www.hrc.org/our-work/stories/the-journey-to-marriage-equality-in-the-united-states" target="_blank">Human Rights Campaign</a>
+				</li>
+				<li>
+					<a href="https://en.wikipedia.org/wiki/History_of_same-sex_marriage_in_the_United_States" target="_blank">Wikipedia - History of Same-Sex Marriage in the United States</a>
+				</li>
+		</div>
+</div>
+
+    </div>
+
+    
+        <div id="footer" style="font-family: sans-serif;font-size: small; display: flex; align-items: center; justify-content: center; margin: 2em">
+            <span style="color: #A5A5A5">Copyright &copy; <script>document.write(new Date().getFullYear())</script></span>&nbsp;
+            <span style="color: #4EAD5B">Dylan</span>
+            <span style="color: #A0CE63">And</span>
+            <span style="color: #4FAEEA">Tyler</span>
+            <span style="color: #A5A5A5">.com</span>
+        </div>
+    
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="static/js/auth.js?v=3"></script>
+</body>
+</html>
